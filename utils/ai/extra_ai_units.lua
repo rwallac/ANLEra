@@ -30,7 +30,7 @@ function anl.extra_units(recruits, gold)
                     break
                 end
             end
-            if is_new then 
+            if is_new then
                 return true
             end
         end
