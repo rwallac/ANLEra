@@ -3,16 +3,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2024-04-01 03:04 UTC\n"
-"PO-Revision-Date: 2024-03-11 20:47+0100\n"
+"POT-Creation-Date: 2024-06-02 22:12 UTC\n"
+"PO-Revision-Date: 2024-06-03 00:15+0200\n"
 "Last-Translator: Severin Glöckner <severin.gloeckner@stud.htwk-leipzig.de>\n"
 "Language-Team: German <irc://irc.libera.chat/#wesnoth-de>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.02.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. [message]: speaker=unit
 #: ANLEra/ANLEra_Sp/worker_options_sp.cfg:67
@@ -44,6 +44,11 @@ msgid "Melt Ice"
 msgstr "Eis schmelzen"
 
 #. [modification]: id=Anewlandsp, type=hybrid
+#: ANLEra/_main.cfg:25
+msgid "ANL Lvl 0 Mod"
+msgstr ""
+
+#. [modification]: id=Anewlandsp, type=hybrid
 #: ANLEra/_main.cfg:27
 msgid "A SP/MP modification, which allows level 0s to build (no research)."
 msgstr ""
@@ -51,6 +56,11 @@ msgstr ""
 "erlaubt, z.B. Dörfer, Burgen oder das Pflanzen und Abholzen von Wäldern.\n"
 "Forschung ist nicht möglich. Für den Einzelspieler- als auch "
 "Mehrspielermodus verfügbar."
+
+#. [era]: id=ANLEra
+#: ANLEra/era.cfg:5
+msgid "A New Land Era"
+msgstr ""
 
 #. [era]: id=ANLEra
 #: ANLEra/era.cfg:8
@@ -119,13 +129,37 @@ msgid ""
 msgstr ""
 "Wenn KI Einheiten auf Dörfer, Burgen oder Ackerland ziehen, zerstören sie es."
 
-#. [checkbox]: id=anl_debug
+#. [checkbox]: id=exponential_upkeep
+#: ANLEra/era.cfg:318
+msgid "Exponential Upkeep Costs"
+msgstr "Exponentielle Unterhaltskosten"
+
+#. [checkbox]: id=exponential_upkeep
 #: ANLEra/era.cfg:319
+msgid ""
+"Unit upkeep costs are exponential to their level.\n"
+"Level 0 units cost 0 gold.\n"
+"Level 1 units cost 1 gold.\n"
+"Level 2 units cost 4 gold.\n"
+"Level 3 units cost 9 gold.\n"
+"\n"
+"Affects only recuited units, not the freed prisoner units."
+msgstr ""
+"Unterhaltskosten sind exponentiell zur Stufe der Einheit.\n"
+"Stufe 0 kostet 0\n"
+"Stufe 1 kostet 1\n"
+"Stufe 2 kostet 4\n"
+"Stufe 3 kostet 9\n"
+"\n"
+"Betrifft nur rekrutierte Einheiten, nicht die befreiten Gefangenen."
+
+#. [checkbox]: id=anl_debug
+#: ANLEra/era.cfg:331
 msgid "ANL no cheating"
 msgstr "ANL Cheats deaktivieren"
 
 #. [checkbox]: id=anl_debug
-#: ANLEra/era.cfg:320
+#: ANLEra/era.cfg:332
 msgid ""
 "Adds some debug utilities over forest terrain. Only available if Wesnoth is "
 "started with --debug (or -d) as command line parameter. Using ingame :debug "
@@ -138,12 +172,12 @@ msgstr ""
 "durch :set_var anl_debug=no"
 
 #. [checkbox]: id=duplicate_team_colors
-#: ANLEra/era.cfg:326
+#: ANLEra/era.cfg:338
 msgid "Allow duplicate team colors"
 msgstr "Doppelte Teamfarben erlauben"
 
 #. [checkbox]: id=duplicate_team_colors
-#: ANLEra/era.cfg:327
+#: ANLEra/era.cfg:339
 msgid ""
 "If two sides have the same team color, a new color will be assigned to the "
 "side with the higher number.\n"
@@ -584,7 +618,7 @@ msgstr "Oger"
 
 #. [message]: speaker=narrator
 #. [note]
-#: ANLEra/scenarios/4p_End_Of_Days.cfg:88 ANLEra/utils/objectives.cfg:311
+#: ANLEra/scenarios/4p_End_Of_Days.cfg:88 ANLEra/utils/objectives.cfg:309
 msgid ""
 "Ogres are your demolition workers. They are extremely useful for clearing "
 "ground and destroying enemy positions."
@@ -613,7 +647,7 @@ msgstr "Monumente"
 
 #. [message]: speaker=narrator
 #. [note]
-#: ANLEra/scenarios/4p_End_Of_Days.cfg:105 ANLEra/utils/objectives.cfg:302
+#: ANLEra/scenarios/4p_End_Of_Days.cfg:105 ANLEra/utils/objectives.cfg:300
 msgid ""
 "Monuments cost $monumentprice?70| gold and can only be built on cave. They "
 "cannot be destroyed."
@@ -815,22 +849,22 @@ msgid "Maybe we should be careful, there’s a lot of dangers about."
 msgstr "Wir sollten vorsichtig sein, es gibt hier eine Menge Gefahren."
 
 #. [message]: speaker=narrator
-#: ANLEra/scenarios/5p_A_New_Land.cfg:793
+#: ANLEra/scenarios/5p_A_New_Land.cfg:803
 msgid "Beware of enemy creatures in the mud."
 msgstr "Obacht vor feindlichen Kreaturen aus Schlamm."
 
 #. [message]: speaker=narrator
-#: ANLEra/scenarios/5p_A_New_Land.cfg:916
+#: ANLEra/scenarios/5p_A_New_Land.cfg:926
 msgid "Not so fast…"
 msgstr "Nicht so schnell…"
 
 #. [message]: type=Death Knight
-#: ANLEra/scenarios/5p_A_New_Land.cfg:924
+#: ANLEra/scenarios/5p_A_New_Land.cfg:934
 msgid "Deeaaathh…"
 msgstr "Steeerbt!"
 
 #. [message]: speaker=unit
-#: ANLEra/scenarios/5p_A_New_Land.cfg:997
+#: ANLEra/scenarios/5p_A_New_Land.cfg:1007
 msgid "They’ll never take me alive!"
 msgstr "Sie werden mich nicht lebend bekommen! Niemals!"
 
@@ -907,12 +941,12 @@ msgid "Inhabitants"
 msgstr "Bewohner"
 
 #. [side]: type=Goblin Rouser
-#: ANLEra/scenarios/ANI/define_sides.cfg:184
+#: ANLEra/scenarios/ANI/define_sides.cfg:187
 msgid "Shivshank"
 msgstr "Shivshank"
 
 #. [side]: type=Goblin Rouser
-#: ANLEra/scenarios/ANI/define_sides.cfg:214
+#: ANLEra/scenarios/ANI/define_sides.cfg:217
 msgid "Gagor"
 msgstr "Gagor"
 
@@ -1349,12 +1383,12 @@ msgstr ""
 msgid "Due to their dedication to research, the Universities heal less."
 msgstr "Aufgrund ihrer Widmung zur Forschung heilen Universitäten weniger."
 
-#. [unit_type]: id=ANLEra Drake Apprentice, race=drake
+#. [unit_type]: id=ANLEra Drake Apprentice, race=drake, gender=female
 #: ANLEra/units/drakes/Apprentice.cfg:5
 msgid "Drake Apprentice"
 msgstr "Drakenlehrling"
 
-#. [unit_type]: id=ANLEra Drake Apprentice, race=drake
+#. [unit_type]: id=ANLEra Drake Apprentice, race=drake, gender=female
 #: ANLEra/units/drakes/Apprentice.cfg:20 ANLEra/units/drakes/Apprentice.cfg:22
 msgid ""
 "The Drake Magi are fresh members of the Obsidian Citadel, who have been "
@@ -1376,13 +1410,13 @@ msgstr ""
 msgid "ice shot"
 msgstr "Eisgeschoss"
 
-#. [unit_type]: id=ANLEra Drake Druid, race=drake
+#. [unit_type]: id=ANLEra Drake Druid, race=drake, gender=female
 #: ANLEra/units/drakes/Druid.cfg:5
 msgid "Drake Druid"
 msgstr "Drakendruide"
 
-#. [unit_type]: id=ANLEra Drake Druid, race=drake
-#. [unit_type]: id=ANLEra Drake Shaman, race=drake
+#. [unit_type]: id=ANLEra Drake Druid, race=drake, gender=female
+#. [unit_type]: id=ANLEra Drake Shaman, race=drake, gender=female
 #: ANLEra/units/drakes/Druid.cfg:21 ANLEra/units/drakes/Druid.cfg:23
 #: ANLEra/units/drakes/Shaman.cfg:21 ANLEra/units/drakes/Shaman.cfg:23
 msgid ""
@@ -1400,7 +1434,7 @@ msgstr ""
 "hinweg einsetzen. Aufgrund der Energie welche sie dafür benötigen fehlt es "
 "ihnen jedoch an Schnelligkeit und Kraft."
 
-#. [unit_type]: id=ANLEra Drake Shaman, race=drake
+#. [unit_type]: id=ANLEra Drake Shaman, race=drake, gender=female
 #: ANLEra/units/drakes/Shaman.cfg:5
 msgid "Drake Shaman"
 msgstr "Drakenschamane"
@@ -1431,13 +1465,13 @@ msgstr ""
 "fliegen und es fehlt ihnen noch an der Ausdauer, um über tiefem Wasser und "
 "unbegehbarem Gelände zu fliegen."
 
-#. [unit_type]: id=ANLEra Young Saurian, race=lizard
+#. [unit_type]: id=ANLEra Young Saurian, race=lizard, gender=male,female
 #. unit type name for both male and female
 #: ANLEra/units/drakes/Young.cfg:8
 msgid "unit^Young Saurian"
 msgstr "Junger Saurianer"
 
-#. [unit_type]: id=ANLEra Young Saurian, race=lizard
+#. [unit_type]: id=ANLEra Young Saurian, race=lizard, gender=male,female
 #: ANLEra/units/drakes/Young.cfg:28
 msgid ""
 "Young saurians often work for Drakes. Some work underground in mines, while "
@@ -1455,26 +1489,26 @@ msgstr ""
 "Neben den auf Nahkampf ausgerichteten jungen Saurianern gibt es auch "
 "Magieliebhaber, die sich auf den Fernkampf spezialisiert haben."
 
-#. [female]
+#. [female]: gender=female
 #. rather gender-neutral, skirmisher tree
 #: ANLEra/units/drakes/Young.cfg:119
 msgid "miner^Young Saurian"
 msgstr "Junger Saurianer"
 
-#. [female]
+#. [female]: gender=female
 #: ANLEra/units/drakes/Young.cfg:121
 msgid ""
 "Young saurians work often as miners because they are smaller than Drakes."
 msgstr ""
 "Junge Saurianer arbeiten oft in Bergwerken weil sie kleiner sind als Draken."
 
-#. [male]
+#. [male]: gender=male
 #. rather gender-neutral, augur tree
 #: ANLEra/units/drakes/Young.cfg:130
 msgid "magican^Young Saurian"
 msgstr "Junger Saurianer"
 
-#. [male]
+#. [male]: gender=male
 #: ANLEra/units/drakes/Young.cfg:138
 msgid ""
 "Saurians have some knowledge of what men call sorcery, but their practice of "
@@ -1498,12 +1532,12 @@ msgstr ""
 "nicht geschwächt – es ist stets die selbe wie auf flachem Terrain. Wenn eine "
 "defensive Position benötigt wird, ziehen sie sich in die Hügel zurück."
 
-#. [unit_type]: id=ANLEra Dune Civilian, race=dunefolk
+#. [unit_type]: id=ANLEra Dune Civilian, race=dunefolk, gender=male
 #: ANLEra/units/dunefolk/Civilian.cfg:61
 msgid "Dune Civilian"
 msgstr "Wüstenbewohner"
 
-#. [unit_type]: id=ANLEra Dune Civilian, race=dunefolk
+#. [unit_type]: id=ANLEra Dune Civilian, race=dunefolk, gender=male
 #. General hint about playing dunefolk, part of the unit description of all variations.
 #: ANLEra/units/dunefolk/Civilian.cfg:81
 msgid ""
@@ -1765,12 +1799,12 @@ msgstr ""
 "Gelände und in Wäldern verwundbar. Um ihr volles Potenzial auszuschöpfen "
 "müsst Ihr diese Einheit aktiv einsetzen."
 
-#. [unit_type]: id=ANLEra Elvish Civilian, race=elf
+#. [unit_type]: id=ANLEra Elvish Civilian, race=elf, gender=male,female
 #: ANLEra/units/elves/Citizen.cfg:8
 msgid "Elvish Citizen"
 msgstr "Elfischer Bürger"
 
-#. [unit_type]: id=ANLEra Elvish Civilian, race=elf
+#. [unit_type]: id=ANLEra Elvish Civilian, race=elf, gender=male,female
 #: ANLEra/units/elves/Citizen.cfg:29 ANLEra/units/elves/Citizen.cfg:31
 msgid ""
 "Since elves are not warlike by nature, most of their population is composed "
@@ -1787,18 +1821,18 @@ msgstr ""
 "überlegenen Einheiten."
 
 #. [special_note]
-#. [unit_type]: id=ANLEra Elvish Civilian, race=elf
+#. [unit_type]: id=ANLEra Elvish Civilian, race=elf, gender=male,female
 #: ANLEra/units/elves/Citizen.cfg:33 ANLEra/units/elves/Citizen.cfg:29
 msgid "Depending on its gender this unit has different advancement paths."
 msgstr ""
 "Je nach Geschlecht hat diese Einheit verschiedene Aufstiegsmöglichkeiten."
 
-#. [female]
+#. [female]: gender=female
 #: ANLEra/units/elves/Citizen.cfg:106
 msgid "female^Elvish Citizen"
 msgstr "Elfische Bürgerin"
 
-#. [unit_type]: id=ANLEra Novice Orcish Shaman, race=orc
+#. [unit_type]: id=ANLEra Novice Orcish Shaman, race=orc, gender=male,female
 #: ANLEra/units/orcs/Novice_Orcish_Shaman.cfg:11
 msgid "Young Orcish Shaman"
 msgstr "Junger Orkschamane"
@@ -1808,7 +1842,7 @@ msgstr "Junger Orkschamane"
 msgid "female^Young Orcish Shaman"
 msgstr "Junge Orkschamanin"
 
-#. [unit_type]: id=ANLEra Old Orcish Shaman, race=orc
+#. [unit_type]: id=ANLEra Old Orcish Shaman, race=orc, gender=male,female
 #: ANLEra/units/orcs/Old_Orcish_Shaman.cfg:11
 msgid "Elder Orcish Shaman"
 msgstr "Alter Orkschamane"
@@ -2547,107 +2581,107 @@ msgid "Use the teamchat! (Press »ctrl« + »m«)"
 msgstr "Verwendet den Teamchat! (drückt »strg« + »m«)"
 
 #. [objectives]
-#: ANLEra/utils/objectives.cfg:239
+#: ANLEra/utils/objectives.cfg:237
 msgid "Monuments:"
 msgstr "Monumente:"
 
 #. [objective]: condition=win
-#: ANLEra/utils/objectives.cfg:244
+#: ANLEra/utils/objectives.cfg:242
 msgid "The winner is the first player to construct 4 monuments"
 msgstr "Der Sieger ist der erste Spieler, der 4 Monumente erschafft"
 
 #. [objective]: condition=win
-#: ANLEra/utils/objectives.cfg:250
+#: ANLEra/utils/objectives.cfg:248
 msgid "Kill all enemy leaders — or survive longer than they"
 msgstr "Besiegt alle gegnerischen Anführer – oder überlebt länger als sie"
 
 #. [objectives]
-#: ANLEra/utils/objectives.cfg:256
+#: ANLEra/utils/objectives.cfg:254
 msgid "Side 1 built one monument"
 msgstr "Partei 1 hat ihr erstes Monument erbaut"
 
 #. [objectives]
-#: ANLEra/utils/objectives.cfg:257
+#: ANLEra/utils/objectives.cfg:255
 msgid "Side 1 built two monuments"
 msgstr "Partei 1 hat zwei Monumente erbaut"
 
 #. [objectives]
-#: ANLEra/utils/objectives.cfg:258
+#: ANLEra/utils/objectives.cfg:256
 msgid "Side 1 built <b>three</b> monuments"
 msgstr "Partei 1 besitzt bereits <b>drei</b> Monumente"
 
 #. [objectives]
-#: ANLEra/utils/objectives.cfg:259
+#: ANLEra/utils/objectives.cfg:257
 msgid "Side 1 built four monuments"
 msgstr "Partei 1 hat vier Monumente erbaut"
 
 #. [objectives]
-#: ANLEra/utils/objectives.cfg:260
+#: ANLEra/utils/objectives.cfg:258
 msgid "Side 2 built one monument"
 msgstr "Partei 2 hat ihr erstes Monument erbaut"
 
 #. [objectives]
-#: ANLEra/utils/objectives.cfg:261
+#: ANLEra/utils/objectives.cfg:259
 msgid "Side 2 built two monuments"
 msgstr "Partei 2 hat zwei Monumente erbaut"
 
 #. [objectives]
-#: ANLEra/utils/objectives.cfg:262
+#: ANLEra/utils/objectives.cfg:260
 msgid "Side 2 built <b>three</b> monuments"
 msgstr "Partei 2 besitzt bereits <b>drei</b> Monumente"
 
 #. [objectives]
-#: ANLEra/utils/objectives.cfg:263
+#: ANLEra/utils/objectives.cfg:261
 msgid "Side 2 built four monuments"
 msgstr "Partei 2 hat vier Monumente erbaut"
 
 #. [objectives]
-#: ANLEra/utils/objectives.cfg:264
+#: ANLEra/utils/objectives.cfg:262
 msgid "Side 3 built one monument"
 msgstr "Partei 3 hat ihr erstes Monument erbaut"
 
 #. [objectives]
-#: ANLEra/utils/objectives.cfg:265
+#: ANLEra/utils/objectives.cfg:263
 msgid "Side 3 built two monuments"
 msgstr "Partei 3 hat zwei Monumente erbaut"
 
 #. [objectives]
-#: ANLEra/utils/objectives.cfg:266
+#: ANLEra/utils/objectives.cfg:264
 msgid "Side 3 built <b>three</b> monuments"
 msgstr "Partei 3 besitzt bereits <b>drei</b> Monumente"
 
 #. [objectives]
-#: ANLEra/utils/objectives.cfg:267
+#: ANLEra/utils/objectives.cfg:265
 msgid "Side 3 built four monuments"
 msgstr "Partei 3 hat vier Monumente erbaut"
 
 #. [objectives]
-#: ANLEra/utils/objectives.cfg:268
+#: ANLEra/utils/objectives.cfg:266
 msgid "Side 4 built one monument"
 msgstr "Partei 4 hat ihr erstes Monument erbaut"
 
 #. [objectives]
-#: ANLEra/utils/objectives.cfg:269
+#: ANLEra/utils/objectives.cfg:267
 msgid "Side 4 built two monuments"
 msgstr "Partei 4 hat zwei Monumente erbaut"
 
 #. [objectives]
-#: ANLEra/utils/objectives.cfg:270
+#: ANLEra/utils/objectives.cfg:268
 msgid "Side 4 built <b>three</b> monuments"
 msgstr "Partei 4 besitzt bereits <b>drei</b> Monumente"
 
 #. [objectives]
-#: ANLEra/utils/objectives.cfg:271
+#: ANLEra/utils/objectives.cfg:269
 msgid "Side 4 built four monuments"
 msgstr "Partei 4 hat vier Monumente erbaut"
 
 #. [objective]: condition=lose
-#: ANLEra/utils/objectives.cfg:273
+#: ANLEra/utils/objectives.cfg:271
 msgid "Nobody built any monuments yet"
 msgstr "Bisher hat niemand Monumente errichtet"
 
 #. [objective]: condition=lose
-#: ANLEra/utils/objectives.cfg:285
+#: ANLEra/utils/objectives.cfg:283
 msgid "You cannot hide from the Inferno Drakes"
 msgstr "Ihr könnt Euch vor den Armageddondraken nicht verstecken"
 
