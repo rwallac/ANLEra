@@ -196,6 +196,12 @@
  - Fix undo bug, affects only 1.18. Undoing is now disabled in those cases.
  - Construction message is translated
 
+3.3.4
+ - Fix issues found by validating add-on against schema.
+ - Option to use exponential upkeep.
+ - For 2p A New Island:
+   * Replace water snake with several zombie variations.
+
 Some hints, tweaks, tricks, easter eggs, gimmicks, …:
 - When removing allow_era= from the scenario file, it can be played with leaders from another era!
   (the same way like in mainline). The recruits will be like in mainline (Peasant & Mage).
