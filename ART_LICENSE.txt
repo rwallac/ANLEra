@@ -1,0 +1,25 @@
+Duncanus Dillius (Discord: duncandill)
+- plumbata attack icon, 2023
+
+Mechanical (Discord: orcsteve)
+- female shaman sprites, all levels and animations, 2023
+
+1/2 Kordov (Discord: 12kordov)
+- shaman woman portrait, 2023
+
+Hejnewar (Discord: hejnewar)
+- dunefolk civilian sprites: civilian0,1,2,3,4,village-chef, 2022
+
+The_Quixotic_King (Forums)
+- dunefolk worker sprites: worker,worker-icon,worker-defend,worker-attack-1,worker-attack-2, 2020
+
+Shield (Discord: tzalmavet)
+- new Elvish Civilian sprites, 2024
+
+From the campaign Across the Ocean
+- saurian sprites, portraits and their pick projectile
+
+From Trader add-on
+- shovel icon
+
+Most of these images are derivates of GPLv2+ licensed images. See COPYING.txt file.
