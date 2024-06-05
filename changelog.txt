@@ -179,7 +179,7 @@
    * Portrait restored for mainline Dwarvish Miner
 
 3.3.1
- - Disabled unit placed event (maybe OOS)
+ - Temporary disabled unit placed event (maybe OOS)
  - Show different message to others when constructing buildings
  - Display version number in the ANL help
  - Units:
@@ -202,11 +202,17 @@
  - For 2p A New Island:
    * Replace water snake with several zombie variations.
 
+3.3.5
+ - Fix OOS errors when ai destruction option is active, affected only 1.18.
+ - Removed image files which were mainlined in 1.18.
+ - Units:
+   * Dunefolk Civilian HP from 20 to 19.
+
 Some hints, tweaks, tricks, easter eggs, gimmicks, …:
 - When removing allow_era= from the scenario file, it can be played with leaders from another era!
   (the same way like in mainline). The recruits will be like in mainline (Peasant & Mage).
   Downside: might now be you instead of the game, who has to guarantee that all use the same version.
 - By negotiation with mermen one can get a builder for water fields.
 - One can also get a merfolk mage, who can also research. Water based university exist too.
-- When starting wesnoth with --debug, one can to some extend change enemy sides (prior to starting the match).
+- When starting wesnoth with --debug, one can change enemy sides (prior to starting the match).
 - When starting wesnoth with --debug, some cheats are available when clicking over forest terrain.
