@@ -208,6 +208,9 @@
  - Units:
    * Dunefolk Civilian HP from 20 to 19.
 
+3.3.6
+ - Fix ai units destroying neutral villages instead of capturing them.
+
 Some hints, tweaks, tricks, easter eggs, gimmicks, …:
 - When removing allow_era= from the scenario file, it can be played with leaders from another era!
   (the same way like in mainline). The recruits will be like in mainline (Peasant & Mage).
