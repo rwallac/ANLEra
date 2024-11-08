@@ -59,9 +59,9 @@ anl.determine_choosable_recruits (also used by research.lua)
 -- This lists only the allied sides, excluding the own and leaderless or defeated ones.
 function anl.get_allies()
     local b = {}
-    for k,v in ipairs(wesnoth.get_sides({ {'has_unit', { canrecruit = true }} } )) do
+    for k,v in ipairs(wesnoth.sides.find({ {'has_unit', { canrecruit = true }} } )) do
         if v.side ~= wesnoth.current.side then
-            if not wesnoth.is_enemy(v.side, wesnoth.current.side) then
+            if not wesnoth.sides.is_enemy(v.side, wesnoth.current.side) then
                 if not v.lost then
                     table.insert(b, v)
                 end
@@ -98,7 +98,7 @@ end
 function anl.send_gold_dialog(diplomacy_gold_text)
     if wesnoth.sides[wesnoth.current.side].gold >= 20 then
         local _ = wesnoth.textdomain 'wesnoth-anl'
-        return wesnoth.show_message_dialog(
+        return gui.show_narration(
             {
              title = _ 'Diplomatic Options',
              message = _ 'Who will you donate funds to?',
@@ -109,7 +109,7 @@ function anl.send_gold_dialog(diplomacy_gold_text)
     else
         -- Friendly returning.
         local _ = wesnoth.textdomain 'wesnoth-ANLEra'
-        wesnoth.show_message_dialog(
+        gui.show_narration(
             {
              title = _ 'Diplomatic Options',            -- this is part of wesnoth-anl
              message = _ 'I don’t have enough gold...', -- this not yet
@@ -140,7 +140,7 @@ function anl.send_gold()
     end
 
     -- Decide about sending gold and sync your decision to the other clients.
-    local rc = wesnoth.synchronize_choice(
+    local rc = wesnoth.sync.evaluate_single(
         function()
             return { value = anl.send_gold_dialog(diplomacy_gold_text) }
         end
@@ -180,7 +180,7 @@ end
 -- The displayed dialogue for sending tech.
 function anl.send_tech_dialog(options)
     local _ = wesnoth.textdomain 'wesnoth-anl'
-    return wesnoth.show_message_dialog(
+    return gui.show_narration(
         {
          title = _ 'Diplomatic Options',
          message = _ 'Who will you share knowledge with?',
@@ -252,7 +252,7 @@ function anl.send_tech()
     end
 
     -- Decide about sending thech and sync your decision to the other clients.
-    local rc = wesnoth.synchronize_choice(
+    local rc = wesnoth.sync.evaluate_single(
         function()
             return { value = anl.send_tech_dialog(options) }
         end
@@ -381,7 +381,7 @@ function anl.can_negotiate_with(other_faction)
 
     -- Not needed, only to catch potential coding mistake.
     if partner[1] == nil then
-        wesnoth.message( 'ANL', other_faction .. ' has no units for negotiation')
+        wesnoth.interface.add_chat_message( 'ANL', other_faction .. ' has no units for negotiation')
         return false
     end
 
@@ -598,7 +598,7 @@ function anl.choose_new_unit (v)
     elseif anl.choose_other_new_unit ~= nil then
         choosable, speaker, message = anl.choose_other_new_unit(v, choosable, speaker, message)
     else
-        wesnoth.message('ANL', _'Function anl.choose_new_unit has no information about the faction.')
+        wesnoth.interface.add_chat_message('ANL', _'Function anl.choose_new_unit has no information about the faction.')
     end
 
     -- Build list of options.
@@ -612,8 +612,8 @@ function anl.choose_new_unit (v)
     end
 
     -- Choose and sync decision about choosen unit to the other clients.
-    local rc = wesnoth.synchronize_choice( function()
-            local rc = wesnoth.show_message_dialog( {
+    local rc = wesnoth.sync.evaluate_single( function()
+            local rc = gui.show_narration( {
                     title = _ 'Negotiation Complete',
                     message = message,
                     portrait = speaker,
@@ -633,7 +633,7 @@ end
 -- The main message dialog.
 function anl.diplomacy_dialog(options)
     local _ = wesnoth.textdomain 'wesnoth-anl'
-    return wesnoth.show_message_dialog(
+    return gui.show_narration(
             {
              title = _ 'Diplomatic Options',
              message = _ 'What shall I do?',
@@ -651,13 +651,13 @@ function anl.diplomacy_menu()
     local choices = anl.diplomacy_options()
 
     -- Make a choice and sync it to the other clients.
-    local rc = wesnoth.synchronize_choice(
+    local rc = wesnoth.sync.evaluate_single(
         function()
             return { value = anl.diplomacy_dialog(choices) }
         end
     ).value 
 
-    if rc == nil then wesnoth.message('ANL', "Lua does strange things.") end
+    if rc == nil then wesnoth.interface.add_chat_message('ANL', 'Lua does strange things.') end
 
     -- Handle the choice.
     if rc ~= 1 then

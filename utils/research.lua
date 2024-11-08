@@ -127,8 +127,8 @@ function anl.research_menu(undo_forbidden)
     _ = wesnoth.textdomain 'wesnoth-ANLEra'
 
     -- Show the actual message diaglog:
-    rc = wesnoth.synchronize_choice( function()
-        return { value = wesnoth.show_message_dialog( {
+    rc = wesnoth.sync.evaluate_single( function()
+        return { value = gui.show_narration( {
                             title = _ 'Research',
                             -- po: "g" denotes the unit for gold
                             message = wesnoth.format( _ 'We are currently studying $project_name|. To which end would you have our scholars devote their minds?\n\nOur farms produce $farming_level|g\nOur mines produce $mining_level|g\n',
@@ -158,7 +158,7 @@ end
 -- 2)  anl.determine_faction     is called from there. Based on the researching unit it determines the faction.
 -- 3b) anl.type_adv_tree         is used inside that function as helper function.
 -- 4)  anl.determine_choosable_recruits returns the complement of the side's recruits and the researchable units.
--- 5)  anl.build_recruit_options builds from that informtion a table which conatins the data for wesnoth.show_message_dialog
+-- 5)  anl.build_recruit_options builds from that informtion a table which conatins the data for gui.show_narration
 
 --        The name of the functions 2,3,4,5 are reflecting what they do, but not why they are called.
 --       (anl.determine_faction is called because we want either to craft a table for the message_dialog,
@@ -310,8 +310,8 @@ function anl.determine_faction(mage_type)
             not_yet_researched_units = anl.determine_more_factions(mage_type)
         else
             local _ = wesnoth.textdomain 'wesnoth-ANLEra'
-            wesnoth.message( 'ANL', _'Researching is not fully supported for this unit.')
-            wesnoth.message( 'ANL', _'This is likely a bug. Researcher’s type is ' .. (mage_type or _'NOT GIVEN'))
+            wesnoth.interface.add_chat_message( 'ANL', _'Researching is not fully supported for this unit.')
+            wesnoth.interface.add_chat_message( 'ANL', _'This is likely a bug. Researcher’s type is ' .. (mage_type or _'NOT GIVEN'))
             -- It's a bug because this menu shouldn't be offered then,
             -- so this unit was enabled for the menu but not here.
             return
@@ -340,7 +340,7 @@ function anl.choose_new_recruit()
 
     if choosable[1] == nil then
         local _ = wesnoth.textdomain 'wesnoth-ANLEra'
-        wesnoth.message('ANL', _'No units left to be researched. It’s a bug that this option was offered to you.')
+        wesnoth.interface.add_chat_message('ANL', _'No units left to be researched. It’s a bug that this option was offered to you.')
         -- wesnoth.wml_actions.allow_undo{}
         return
     end
@@ -360,8 +360,8 @@ function anl.choose_new_recruit()
     end
 
     -- Show the dialog:
-    rc = wesnoth.synchronize_choice( function()
-            return { value = wesnoth.show_message_dialog( {
+    rc = wesnoth.sync.evaluate_single( function()
+            return { value = gui.show_narration( {
                                  title = _ 'Study Complete',
                                  message = text(),
                                  portrait = wml.variables['unit'].profile,
@@ -389,7 +389,7 @@ function anl.choose_new_recruit()
         if (choosable[2] == nil) and (wml.variables['player_' .. wesnoth.current.side .. '.research.current_target'] == 'warfare') then
             _ = wesnoth.textdomain 'wesnoth-ANLEra'
             wesnoth.unsynced( function ()
-                wesnoth.show_message_dialog( {
+                gui.show_narration( {
                 -- Fixme: current title is not giving any meaningful information.
                 title = _ 'Study Complete',
                 -- Fixme: Could reformulate the string: researched all units is clear to the player, but is weird from story perspective.

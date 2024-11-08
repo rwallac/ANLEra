@@ -115,11 +115,11 @@ function anl.extra_units(recruits, gold)
 
     -- Adding the new recruits for all AI-sides which are still alive.
     local got_units = {}
-    local alive_sides = wesnoth.get_sides({ {'has_unit', { canrecruit = true }} })
+    local alive_sides = wesnoth.sides.find({ {'has_unit', { canrecruit = true }} })
 
     for i, side in ipairs(alive_sides) do
         -- side.controller may have a different value on other clients, let all clients use the value from one client.
-        local is_ai = wesnoth.synchronize_choice(
+        local is_ai = wesnoth.sync.evaluate_single(
                           function()
                               if side.controller == 'ai' then
                                   return { value = true}
@@ -177,10 +177,10 @@ function anl.extra_units(recruits, gold)
         end
 
         local more_than_one = s[2] ~= nil
-        message = message .. wesnoth.format(faction_message(faction, more_than_one),
-                                            { sides = s,
-                                              new_recruits = new_recruits(faction)}
-                                           )
+        message = message .. stringx.vformat(faction_message(faction, more_than_one),
+                                             { sides = s,
+                                               new_recruits = new_recruits(faction)}
+                                            )
     end
 
     if message ~= '' then
