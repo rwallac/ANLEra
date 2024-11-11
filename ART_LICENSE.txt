@@ -19,7 +19,10 @@ Shield (Discord: tzalmavet)
 From the campaign Across the Ocean
 - saurian sprites, portraits and their pick projectile
 
-From Trader add-on
+From Trader add-on (Strange Legacy - RPG)
 - shovel icon
+
+From WoL Faction Flags add-on (Faction-themed Flags)
+- drake flags
 
 Most of these images are derivates of GPLv2+ licensed images. See COPYING.txt file.

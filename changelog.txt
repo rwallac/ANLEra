@@ -211,10 +211,20 @@
 3.3.6
  - Fix ai units destroying neutral villages instead of capturing them.
 
+3.3.7, 3.6.0
+ - 1.14 compatibility removed, 1.19 compatibility added
+ - Dwarvish Miner no longer advances to Thunderer or Scout
+ - Drake flag from knight add-on (not in 1.16)
+ - For 2p A New Land:
+   * Leader Yun
+ - For 1.16 / 1.19:
+   * allow_undo in worker menu
+   * allow_undo in research menu
+
+
 Some hints, tweaks, tricks, easter eggs, gimmicks, …:
 - When removing allow_era= from the scenario file, it can be played with leaders from another era!
   (the same way like in mainline). The recruits will be like in mainline (Peasant & Mage).
-  Downside: might now be you instead of the game, who has to guarantee that all use the same version.
 - By negotiation with mermen one can get a builder for water fields.
 - One can also get a merfolk mage, who can also research. Water based university exist too.
 - When starting wesnoth with --debug, one can change enemy sides (prior to starting the match).
