@@ -131,7 +131,7 @@ function anl.research_menu(undo_forbidden)
         return { value = gui.show_narration( {
                             title = _ 'Research',
                             -- po: "g" denotes the unit for gold
-                            message = wesnoth.format( _ 'We are currently studying $project_name|. To which end would you have our scholars devote their minds?\n\nOur farms produce $farming_level|g\nOur mines produce $mining_level|g\n',
+                            message = stringx.vformat( _ 'We are currently studying $project_name|. To which end would you have our scholars devote their minds?\n\nOur farms produce $farming_level|g\nOur mines produce $mining_level|g\n',
                                 {project_name  = wml.variables['player_' .. wesnoth.current.side .. '.research.target_language_name'],
                                  farming_level = wml.variables['player_' .. wesnoth.current.side .. '.farming.gold'],
                                  mining_level  = wml.variables['player_' .. wesnoth.current.side .. '.mining.gold']}),
@@ -441,10 +441,10 @@ function anl.research_complete()
             speaker = 'narrator',
             caption = _ 'Study Complete',
             image = 'items/flower4.png',
-            message = wesnoth.format(_ '$side_name|’s farms produce now $amount gold.',
-                                    { side_name = side.side_name,
-                                      side_no = side.side,
-                                      amount = wml.variables['player_' .. side.side .. '.farming.gold'] })
+            message = stringx.vformat(_ '$side_name|’s farms produce now $amount gold.',
+                                     { side_name = side.side_name,
+                                       side_no = side.side,
+                                       amount = wml.variables['player_' .. side.side .. '.farming.gold'] })
         }
         increased = false
     end
@@ -469,10 +469,10 @@ function anl.research_complete()
             speaker = 'narrator',
             caption = _ 'Study Complete',
             image = 'items/gold-coins-small.png',
-            message = wesnoth.format(_ '$side_name|’s mines produce now $amount gold.',
-                                    { side_name = side.side_name,
-                                      side_no = side.side,
-                                      amount = wml.variables['player_' .. side.side .. '.mining.gold'] })
+            message = stringx.vformat(_ '$side_name|’s mines produce now $amount gold.',
+                                     { side_name = side.side_name,
+                                       side_no = side.side,
+                                       amount = wml.variables['player_' .. side.side .. '.mining.gold'] })
         }
         increased = false
     end
@@ -499,9 +499,9 @@ function anl.research_complete()
                 caption = _ 'Study Complete',
                 image = 'wesnoth-icon.png',
                 -- po: one new unit available
-                message = wesnoth.format(_ '$side_name|, we have finished researching warfare. Right-click on a researcher in a university to select a unit to recruit.',
-                                        { side_name = side.side_name,
-                                          side_no = side.side })
+                message = stringx.vformat(_ '$side_name|, we have finished researching warfare. Right-click on a researcher in a university to select a unit to recruit.',
+                                         { side_name = side.side_name,
+                                           side_no = side.side })
             }
         else
             wesnoth.wml_actions.message{
@@ -509,9 +509,9 @@ function anl.research_complete()
                 caption = _ 'Study Complete',
                 image = 'wesnoth-icon.png',
                 -- po: multiple new units available
-                message = wesnoth.format(_ '$side_name|, we have finished researching warfare. Right-click on a researcher in a university to select new units to recruit.',
-                                        { side_name = side.side_name,
-                                          side_no = side.side })
+                message = stringx.vformat(_ '$side_name|, we have finished researching warfare. Right-click on a researcher in a university to select new units to recruit.',
+                                         { side_name = side.side_name,
+                                           side_no = side.side })
             }
         end
         increased = false
@@ -553,10 +553,10 @@ function anl.research_complete()
                 image = book(side.faction),
                 -- It's +1 more, which for level 1 units is 100% more. Ignoring that for L2 it's not 100%.
                 -- po: shown after accomplishing the philisophy research project the first time
-                message = wesnoth.format(_ 'By coordinating research efforts and creating dedicated teams $side_name|’s scholars managed to double their research results.',
-                                        { side_name = side.side_name,
-                                          side_no = side.side,
-                                          amount = wml.variables['player_' .. side.side .. '.philosophy.bonus'] })
+                message = stringx.vformat(_ 'By coordinating research efforts and creating dedicated teams $side_name|’s scholars managed to double their research results.',
+                                         { side_name = side.side_name,
+                                           side_no = side.side,
+                                           amount = wml.variables['player_' .. side.side .. '.philosophy.bonus'] })
             }
         else
             wesnoth.wml_actions.message{
@@ -564,10 +564,10 @@ function anl.research_complete()
                 caption = _ 'Study Complete',
                 image = book(side.faction),
                 -- po: shown the 2nd and later times after completing philisophy research
-                message = wesnoth.format(_ 'The scienific progress of $side_name|’s scholars is by now at $amount|00%.',
-                                        { side_name = side.side_name,
-                                          side_no = side.side,
-                                          amount = wml.variables['player_' .. side.side .. '.philosophy.bonus'] +1 })
+                message = stringx.vformat(_ 'The scienific progress of $side_name|’s scholars is by now at $amount|00%.',
+                                         { side_name = side.side_name,
+                                           side_no = side.side,
+                                           amount = wml.variables['player_' .. side.side .. '.philosophy.bonus'] +1 })
             }
         end
         increased = false

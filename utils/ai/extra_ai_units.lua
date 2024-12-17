@@ -44,7 +44,7 @@ function anl.extra_units(recruits, gold)
         for i, unit in ipairs(recruits[faction]) do
             table.insert(translated_names, wesnoth.unit_types[unit].name)
         end
-        return wesnoth.format_conjunct_list('', translated_names)
+        return stringx.format_conjunct_list('', translated_names)
     end
 
 
@@ -184,7 +184,7 @@ function anl.extra_units(recruits, gold)
     end
 
     if message ~= '' then
-        wesnoth.show_message_dialog( {
+        gui.show_narration( {
             title = _ 'New recruits for AI-controlled sides:',
             portrait = 'wesnoth-icon.png',
             message = message

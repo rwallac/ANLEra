@@ -132,9 +132,9 @@ function anl.send_gold()
     _ = wesnoth.textdomain 'wesnoth-ANLEra'
     for k,v in ipairs( anl.get_allies() ) do
         table.insert(diplomacy_gold_text,
-            { label = wesnoth.format(_'Send gold to $side_name from side $side_no|.',
-                      { side_name = v.side_name,
-                        side_no = v.side }),
+            { label = stringx.vformat(_'Send gold to $side_name from side $side_no|.',
+                       { side_name = v.side_name,
+                         side_no = v.side }),
               image = v.flag_icon .. '~TC(' .. v.side .. ', flag_green)' }
         )
     end
@@ -167,9 +167,9 @@ function anl.send_gold()
         wesnoth.wml_actions.message{
             side = wesnoth.current.side,
             canrecruit = true,
-            message = wesnoth.format(_'I hereby donate 20 gold to the coffers of $player_name from side $side|.', 
-                                    { player_name = anl.get_allies()[ rc-1 ].side_name ,
-                                      side = anl.get_allies()[ rc-1 ].side })
+            message = stringx.vformat(_'I hereby donate 20 gold to the coffers of $player_name from side $side|.',
+                                     { player_name = anl.get_allies()[ rc-1 ].side_name ,
+                                       side = anl.get_allies()[ rc-1 ].side })
         }
 
         if anl.post_diplomacy then anl.post_diplomacy() end
@@ -209,9 +209,9 @@ function anl.send_tech()
         -- Compare own with allied tech, only offer option if one is more advanced.
         if wml.variables['player_' .. v.side] ~= nil and own_farming > wml.variables['player_' .. v.side][1][2].gold then
             table.insert(options, {
-                label = wesnoth.format(_"<span color='green'>$side_name from side $side_no|</span>\nShare knowledge of agriculture",
-                                      { side_name = v.side_name,
-                                        side_no = v.side }),
+                label = stringx.vformat(_"<span color='green'>$side_name from side $side_no|</span>\nShare knowledge of agriculture",
+                                       { side_name = v.side_name,
+                                         side_no = v.side }),
                 -- Cropping to have not 72px heigh, which would then use more space than the label text.
                 -- Can use 18,28,35,16 for cropping, but a bit extra to align.
                 image = 'items/flower4.png~CROP(12,28,49,16)',
@@ -222,9 +222,9 @@ function anl.send_tech()
 
         if wml.variables['player_' .. v.side] ~= nil and own_mining > wml.variables['player_' .. v.side][2][2].gold then
             table.insert(options, {
-                label = wesnoth.format(_"<span color='green'>$side_name from side $side_no|</span>\nShare knowledge of mining",
-                                      { side_name = v.side_name,
-                                        side_no = v.side } ),
+                label = stringx.vformat(_"<span color='green'>$side_name from side $side_no|</span>\nShare knowledge of mining",
+                                       { side_name = v.side_name,
+                                         side_no = v.side }),
                 -- Can use 22,25,33,30 for cropping, but uses different values to align.
                 image = 'items/gold-coins-small.png~CROP(13,25,49,30)',
             })
@@ -237,9 +237,9 @@ function anl.send_tech()
                 -- FIXME: not a precise messurement whether the other player has still researchable units, but workable.
                 -- Every side can at least get 5.
                 table.insert(options, {
-                    label =  wesnoth.format(_"<span color='green'>$side_name from side $side_no|</span>\nShare knowledge of warfare",
-                                           { side_name = v.side_name,
-                                             side_no = v.side } ),
+                    label =  stringx.vformat(_"<span color='green'>$side_name from side $side_no|</span>\nShare knowledge of warfare",
+                                            { side_name = v.side_name,
+                                              side_no = v.side }),
                     -- With 49px it will not use more space than already used by the label text.
                     image = 'wesnoth-icon.png~SCALE(49,49)',
                 })
@@ -278,9 +278,9 @@ function anl.send_tech()
             wesnoth.wml_actions.message{
                 side = wesnoth.current.side,
                 canrecruit = true,
-                message = wesnoth.format(_ '$side_name from side $side_no|, since our wisdom exceeds yours I have instructed my scholars to further your understanding of agriculture.',
-                                         { side_name = side.side_name,
-                                           side_no = side.side })
+                message = stringx.vformat(_ '$side_name from side $side_no|, since our wisdom exceeds yours I have instructed my scholars to further your understanding of agriculture.',
+                                          { side_name = side.side_name,
+                                            side_no = side.side })
             }
 
         -- Mining:
@@ -291,9 +291,9 @@ function anl.send_tech()
             wesnoth.wml_actions.message{
                 side = wesnoth.current.side,
                 canrecruit = true,
-                message = wesnoth.format(_ '$side_name from side $side_no|, since the wisdom of my people exceeds yours I have instructed my scholars to aid you in your efforts to learn the science of mining.',
-                                        { side_name = side.side_name,
-                                          side_no = side.side })
+                message = stringx.vformat(_ '$side_name from side $side_no|, since the wisdom of my people exceeds yours I have instructed my scholars to aid you in your efforts to learn the science of mining.',
+                                         { side_name = side.side_name,
+                                           side_no = side.side })
             }
 
         -- Warfare:
@@ -304,9 +304,9 @@ function anl.send_tech()
             wesnoth.wml_actions.message{
                 side = wesnoth.current.side,
                 canrecruit = true,
-                message = wesnoth.format(_ '$side_name from side $side_no|, you know worryingly little about the arts of war. I feel an obligation to instruct you in this vital matter.',
-                                        { side_name = side.side_name,
-                                          side_no = side.side })
+                message = stringx.vformat(_ '$side_name from side $side_no|, you know worryingly little about the arts of war. I feel an obligation to instruct you in this vital matter.',
+                                         { side_name = side.side_name,
+                                           side_no = side.side })
             }
         end
 
