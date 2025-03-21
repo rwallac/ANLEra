@@ -94,6 +94,12 @@ function anl.extra_units(recruits, gold)
         elseif faction == 'ANLEra_Dunefolk' then
             return _ 'one^The Dunefolk from side $sides can now recruit: $new_recruits'
 
+        -- Adding these strings here too.
+        elseif faction == 'JoyCamp_Halfelven' and plural then
+            return _ 'many^Halfelven from sides $sides can now recruit: $new_recruits'
+        elseif faction == 'JoyCamp_Halfelven' then
+            return _ 'one^Halfelven from side $sides can now recruit: $new_recruits'
+
         else
             -- Extension point:
             -- If this function is added by another add-on,
