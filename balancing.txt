@@ -39,21 +39,23 @@ Remove castle, keep: 5 & 10
 
 
 Unit comparision:
-         cost, exp,   hp, melee / ranged, defence
-Peasant    8  23(16)  18     10 / 4       normal
-Woodsman   -  23(16)  18      3 / 12      forest bonus
-Ruffian    -  18(13)  16     10 / -       normal
-Citizen    8  22(15)  17      8 / 8       forest bonus
-Miner      9  26(18)  20     10 / 5       mountain & hill bonus, flat & village malus
-Worker    10  26(18)  25     12 / 6       double malus everywhere
-Young      8  20(14)  15     differs      forest bonus
-Nomad      8  21(15)  20     12 / -       normal (sand and hill get a bonus, the forest a malus)
-Goblin     9  18(13)  18     18 / 4       normal
-Zombie     8  24(17)  18     12 / -       normal
-Merman     9  22(15)  20     12 / -       water unit
+        cost, experience, hp, melee / ranged, defence
+Peasant*   8  19(13, 10)  18     10 / 4       normal
+Woodsman*  -  19(13, 10)  18      3 / 12      forest bonus
+Ruffian*   -  16(13, 10)  16     10 / -       normal
+Citizen    8  22(15, 12)  17      8 / 8       forest bonus
+Miner*    11  20(14, 11)  25     12 / -       mountain & hill bonus, flat & village malus
+Worker    10  25(18, 14)  25     12 / 6       double malus everywhere
+Young      8  20(14, 11)  15     differs      forest bonus
+Nomad      8  24(17, 14)  19     12 / -       normal (sand and hill get a bonus, the forest a malus)
+Goblin*    9  18(13, 16)  18     18 / 4       normal
+Zombie*    8  24(17)      18     12 / -       normal
+Merman*    9  22(15, 12)  20     12 / -       water unit
 
 Dwarves have 1 move less, because they have minimum speed cost for mountains.
 Zombies have 1 move less, because they will create a new unit if they can catch an escaping enemy.
+experience = value in unit file (value with 70% ingame, value with trait)
+* = mainline unit, not modifiable
 
 From the table one can read:
 Ruffian  = less hp, same damage
@@ -63,5 +65,5 @@ Miner    = stronger, very vulnerable on flat & forests
 Worker   = even stronger, but must heal a lot
 Young    = ?
 Nomad    = hills have the role of forests, while sand and forests are like flat
-Goblin   = a problem
+Goblin   = very strong
 Zombie   = like Peasant
