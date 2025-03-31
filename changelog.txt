@@ -220,6 +220,27 @@
  - For 1.16 / 1.19:
    * allow_undo in worker menu
    * allow_undo in research menu
+ - JoyCamp add-on is based on 3.6.0
+
+3.5.1, 3.6.1
+ - Scenarios can be played with era from 1.19 JoyCamp add-on
+ - Drake flag uses png instead of webp
+ - Saurian portrait variant removed
+ - Switch to new mushroom terrain codes in map files
+ - Changed icon for removing only overlay terrain
+ - Building changes:
+   * Merfolk can remove paths and clear the ground
+   * Merfolk generates +1 gold on water/swamp
+ - Units:
+   * Fix attack animation of level 3 Drake mage
+   * Dwarvish Miner uses 1.19 value of 20 experience
+   * Dunefolk Civilian increased experience
+ - For 2p A New Land:
+   * Chocobone no longer destroys allied villages
+   * Wraith movement fixed
+   * Spider removed
+   * Deathblade added
+   * Easteregg [tunnel]s activated
 
 
 Some hints, tweaks, tricks, easter eggs, gimmicks, …:
