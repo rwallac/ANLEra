@@ -248,7 +248,7 @@ function anl.type_adv_tree(search_type, current_type, exclude_set)
     else
         -- Candidate for OoS: The type might not exist on all machines.
         -- Handling as false in that case, as it's more likely.
-        -- (i.e. it's assumed the non-existent type is one which soes not advance to the on-map unit)
+        -- (i.e. it's assumed the non-existent type is one which does not advance to the on-map unit)
         -- Note: There's another unrelated canidate for issues here:
         -- The effects of the WML tag [modify_unit_type] are not seen by wesnoth.unit_types[… … …].
         return false
@@ -383,15 +383,15 @@ function anl.choose_new_recruit()
         -- An exception would be if the faction has other researchers who can still research units belonging to other factions.
         if (choosable[2] == nil) and (wml.variables['player_' .. wesnoth.current.side .. '.research.current_target'] == 'warfare') then
             _ = wesnoth.textdomain 'wesnoth-ANLEra'
-            wesnoth.unsynced( function ()
+            if not wesnoth.interface.is_skipping_messages() then
                 gui.show_narration( {
                 -- Fixme: current title is not giving any meaningful information.
                 title = _ 'Study Complete',
                 -- Fixme: Could reformulate the string: researched all units is clear to the player, but is weird from story perspective.
                 message = _ 'We researched all units. It would be wise to change the research target now.',
                 portrait = wml.variables['unit'].profile,
-                }) end
-            )
+                })
+            end
             -- Prompt the player to choose a new research target. Disallow undoing.
             anl.research_menu(true)
         end
@@ -436,7 +436,7 @@ function anl.research_complete()
         increased = true
     end
 
-    if increased then
+    if increased and not wesnoth.interface.is_skipping_messages() then
         wesnoth.wml_actions.message{
             speaker = 'narrator',
             caption = _ 'Study Complete',
@@ -446,8 +446,8 @@ function anl.research_complete()
                                        side_no = side.side,
                                        amount = wml.variables['player_' .. side.side .. '.farming.gold'] })
         }
-        increased = false
     end
+    increased = false
 
 
     -- mining resarch
@@ -464,7 +464,7 @@ function anl.research_complete()
         increased = true
     end
 
-    if increased then
+    if increased and not wesnoth.interface.is_skipping_messages() then
         wesnoth.wml_actions.message{
             speaker = 'narrator',
             caption = _ 'Study Complete',
@@ -474,8 +474,8 @@ function anl.research_complete()
                                        side_no = side.side,
                                        amount = wml.variables['player_' .. side.side .. '.mining.gold'] })
         }
-        increased = false
     end
+    increased = false
 
 
     -- warfare research
@@ -492,7 +492,7 @@ function anl.research_complete()
         increased = true
     end
 
-    if increased then
+    if increased and not wesnoth.interface.is_skipping_messages() then
         if wml.variables['player_' .. side.side .. '.warfare.troop_available'] == 1 then
             wesnoth.wml_actions.message{
                 speaker = 'narrator',
@@ -514,8 +514,8 @@ function anl.research_complete()
                                            side_no = side.side })
             }
         end
-        increased = false
     end
+    increased = false
 
 
     -- philisophy research
@@ -532,7 +532,7 @@ function anl.research_complete()
         increased = true
     end
 
-    if increased then
+    if increased and not wesnoth.interface.is_skipping_messages() then
         -- For flavor, change the message image for undead.
         local function book(faction)
             if faction == 'ANLEra_Undead' then
@@ -570,8 +570,8 @@ function anl.research_complete()
                                            amount = wml.variables['player_' .. side.side .. '.philosophy.bonus'] +1 })
             }
         end
-        increased = false
     end
+    increased = false
 end
 
 

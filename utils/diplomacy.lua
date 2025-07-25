@@ -164,13 +164,15 @@ function anl.send_gold()
             amount = -20,
         }
          _ = wesnoth.textdomain 'wesnoth-ANLEra'
-        wesnoth.wml_actions.message{
-            side = wesnoth.current.side,
-            canrecruit = true,
-            message = stringx.vformat(_'I hereby donate 20 gold to the coffers of $player_name from side $side|.',
-                                     { player_name = anl.get_allies()[ rc-1 ].side_name ,
-                                       side = anl.get_allies()[ rc-1 ].side })
-        }
+        if not wesnoth.interface.is_skipping_messages() then
+            wesnoth.wml_actions.message{
+                side = wesnoth.current.side,
+                canrecruit = true,
+                message = stringx.vformat(_'I hereby donate 20 gold to the coffers of $player_name from side $side|.',
+                                         { player_name = anl.get_allies()[ rc-1 ].side_name ,
+                                           side = anl.get_allies()[ rc-1 ].side })
+            }
+        end
 
         if anl.post_diplomacy then anl.post_diplomacy() end
     end
@@ -275,39 +277,45 @@ function anl.send_tech()
             wml.variables['player_' .. side.side .. '.farming.progress'] = progress +1 +
             wml.variables['player_' .. wesnoth.current.side .. '.philosophy.bonus']
 
-            wesnoth.wml_actions.message{
-                side = wesnoth.current.side,
-                canrecruit = true,
-                message = stringx.vformat(_ '$side_name from side $side_no|, since our wisdom exceeds yours I have instructed my scholars to further your understanding of agriculture.',
-                                          { side_name = side.side_name,
-                                            side_no = side.side })
-            }
+            if not wesnoth.interface.is_skipping_messages() then
+                wesnoth.wml_actions.message{
+                    side = wesnoth.current.side,
+                    canrecruit = true,
+                    message = stringx.vformat(_ '$side_name from side $side_no|, since our wisdom exceeds yours I have instructed my scholars to further your understanding of agriculture.',
+                                              { side_name = side.side_name,
+                                                side_no = side.side })
+                }
+            end
 
         -- Mining:
         elseif tech_option == 2 then
             wml.variables['player_' .. side.side .. '.mining.progress'] = progress +1 +
             wml.variables['player_' .. wesnoth.current.side .. '.philosophy.bonus']
 
-            wesnoth.wml_actions.message{
-                side = wesnoth.current.side,
-                canrecruit = true,
-                message = stringx.vformat(_ '$side_name from side $side_no|, since the wisdom of my people exceeds yours I have instructed my scholars to aid you in your efforts to learn the science of mining.',
-                                         { side_name = side.side_name,
-                                           side_no = side.side })
-            }
+            if not wesnoth.interface.is_skipping_messages() then
+                wesnoth.wml_actions.message{
+                    side = wesnoth.current.side,
+                    canrecruit = true,
+                    message = stringx.vformat(_ '$side_name from side $side_no|, since the wisdom of my people exceeds yours I have instructed my scholars to aid you in your efforts to learn the science of mining.',
+                                             { side_name = side.side_name,
+                                               side_no = side.side })
+                }
+            end
 
         -- Warfare:
         elseif tech_option == 3 then
             wml.variables['player_' .. side.side .. '.warfare.progress'] = progress +1 +
             wml.variables['player_' .. wesnoth.current.side .. '.philosophy.bonus']
 
-            wesnoth.wml_actions.message{
-                side = wesnoth.current.side,
-                canrecruit = true,
-                message = stringx.vformat(_ '$side_name from side $side_no|, you know worryingly little about the arts of war. I feel an obligation to instruct you in this vital matter.',
-                                         { side_name = side.side_name,
-                                           side_no = side.side })
-            }
+            if not wesnoth.interface.is_skipping_messages() then
+                wesnoth.wml_actions.message{
+                    side = wesnoth.current.side,
+                    canrecruit = true,
+                    message = stringx.vformat(_ '$side_name from side $side_no|, you know worryingly little about the arts of war. I feel an obligation to instruct you in this vital matter.',
+                                             { side_name = side.side_name,
+                                               side_no = side.side })
+                }
+            end
         end
 
         if anl.post_diplomacy then anl.post_diplomacy() end
