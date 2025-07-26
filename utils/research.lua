@@ -179,16 +179,17 @@ end
 -- List of researchable units.
 -- Unlike the old WML way, it is not saved which units have been researched,
 -- instead the sides current recruits are compared against these ones:
-local drakish_units = {'Drake Fighter', 'Drake Clasher', 'Drake Burner', 'Drake Glider', 'Saurian Skirmisher', 'Saurian Augur' }
-local dwarvish_units = {'Dwarvish Fighter', 'Dwarvish Guardsman', 'Dwarvish Scout', 'Dwarvish Thunderer', 'Dwarvish Ulfserker', 'Gryphon Rider'}
-local elvish_units = {'Elvish Archer', 'Elvish Fighter', 'Elvish Scout', 'Wose'}
-local human_units = {'Spearman', 'Fencer', 'Heavy Infantryman', 'Sergeant', 'Bowman', 'Horseman', 'Cavalryman'}
-local orcish_units = {'Orcish Grunt', 'Orcish Archer', 'Orcish Assassin', 'Troll Whelp', 'Wolf Rider'}
+anl.researchable_units = {}
+anl.researchable_units.drakish_units = {'Drake Fighter', 'Drake Clasher', 'Drake Burner', 'Drake Glider', 'Saurian Skirmisher', 'Saurian Augur' }
+anl.researchable_units.dwarvish_units = {'Dwarvish Fighter', 'Dwarvish Guardsman', 'Dwarvish Scout', 'Dwarvish Thunderer', 'Dwarvish Ulfserker', 'Gryphon Rider'}
+anl.researchable_units.elvish_units = {'Elvish Archer', 'Elvish Fighter', 'Elvish Scout', 'Wose'}
+anl.researchable_units.human_units = {'Spearman', 'Fencer', 'Heavy Infantryman', 'Sergeant', 'Bowman', 'Horseman', 'Cavalryman'}
+anl.researchable_units.orcish_units = {'Orcish Grunt', 'Orcish Archer', 'Orcish Assassin', 'Troll Whelp', 'Wolf Rider'}
 -- https://www.reddit.com/r/wesnoth/comments/15799mv/myrline_the_outcasts
-local outlaw_units = {'Thug', 'Thief', 'Footpad', 'Poacher', 'Wolf', 'Young Ogre'}
-local undead_units = {'Skeleton', 'Skeleton Archer', 'Vampire Bat', 'Ghost', 'Ghoul', wesnoth.unit_types['Skeleton Rider'] and 'Skeleton Rider'}
-local dunefolk_units = {'Dune Burner', 'Dune Soldier', 'Dune Skirmisher', 'Dune Rover', 'Dune Rider'}
-local special_units = {'Giant Mudcrawler', 'Great Icemonax'}
+anl.researchable_units.outlaw_units = {'Thug', 'Thief', 'Footpad', 'Poacher', 'Wolf', 'Young Ogre'}
+anl.researchable_units.undead_units = {'Skeleton', 'Skeleton Archer', 'Vampire Bat', 'Ghost', 'Ghoul', wesnoth.unit_types['Skeleton Rider'] and 'Skeleton Rider'}
+anl.researchable_units.dunefolk_units = {'Dune Burner', 'Dune Soldier', 'Dune Skirmisher', 'Dune Rover', 'Dune Rider'}
+anl.researchable_units.special_units = {'Giant Mudcrawler', 'Great Icemonax'}
 
 
 -- This functions returns a table containing an entry for each [message][option]
@@ -269,33 +270,33 @@ function anl.determine_faction(mage_type)
     local not_yet_researched_units = {}
 
     if anl.type_adv_tree(mage_type, 'ANLEra Drake Apprentice') then
-        not_yet_researched_units = anl.determine_choosable_recruits(drakish_units)
+        not_yet_researched_units = anl.determine_choosable_recruits(anl.researchable_units.drakish_units)
     elseif anl.type_adv_tree(mage_type, 'Saurian Augur') then
-        not_yet_researched_units = anl.determine_choosable_recruits(drakish_units)
+        not_yet_researched_units = anl.determine_choosable_recruits(anl.researchable_units.drakish_units)
 
     elseif anl.type_adv_tree(mage_type, 'ANLEra Dwarvish Witness') then
-        not_yet_researched_units = anl.determine_choosable_recruits(dwarvish_units)
+        not_yet_researched_units = anl.determine_choosable_recruits(anl.researchable_units.dwarvish_units)
 
     elseif anl.type_adv_tree(mage_type, 'Elvish Shaman') then
-        not_yet_researched_units = anl.determine_choosable_recruits(elvish_units)
+        not_yet_researched_units = anl.determine_choosable_recruits(anl.researchable_units.elvish_units)
 
     elseif anl.type_adv_tree(mage_type, 'Mage') then
-        not_yet_researched_units = anl.determine_choosable_recruits(human_units)
+        not_yet_researched_units = anl.determine_choosable_recruits(anl.researchable_units.human_units)
 
     elseif anl.type_adv_tree(mage_type, 'ANLEra Novice Orcish Shaman') then
-        not_yet_researched_units = anl.determine_choosable_recruits(orcish_units)
+        not_yet_researched_units = anl.determine_choosable_recruits(anl.researchable_units.orcish_units)
 
     elseif anl.type_adv_tree(mage_type, 'ANLEra Rogue Mage') then
-        not_yet_researched_units = anl.determine_choosable_recruits(outlaw_units)
+        not_yet_researched_units = anl.determine_choosable_recruits(anl.researchable_units.outlaw_units)
 
     elseif anl.type_adv_tree(mage_type, 'Dark Adept') then
-        not_yet_researched_units = anl.determine_choosable_recruits(undead_units)
+        not_yet_researched_units = anl.determine_choosable_recruits(anl.researchable_units.undead_units)
 
     elseif anl.type_adv_tree(mage_type, 'Dune Herbalist') then
-        not_yet_researched_units = anl.determine_choosable_recruits(dunefolk_units)
+        not_yet_researched_units = anl.determine_choosable_recruits(anl.researchable_units.dunefolk_units)
 
     elseif anl.type_adv_tree(mage_type, 'Mermaid Initiate') then
-        not_yet_researched_units = anl.determine_choosable_recruits(special_units)
+        not_yet_researched_units = anl.determine_choosable_recruits(anl.researchable_units.special_units)
     else
 
         -- Extension point:
@@ -432,7 +433,7 @@ function anl.research_complete()
         wml.variables['player_' .. side.side .. '.farming.progress'] -
         wml.variables['player_' .. side.side .. '.farming.target']
         wml.variables['player_' .. side.side .. '.farming.target'] =
-        wml.variables['player_' .. side.side .. '.farming.target'] +1
+        wml.variables['player_' .. side.side .. '.farming.target'] *2
         increased = true
     end
 
@@ -460,7 +461,7 @@ function anl.research_complete()
         wml.variables['player_' .. side.side .. '.mining.progress'] -
         wml.variables['player_' .. side.side .. '.mining.target']
         wml.variables['player_' .. side.side .. '.mining.target'] =
-        wml.variables['player_' .. side.side .. '.mining.target'] +1
+        wml.variables['player_' .. side.side .. '.mining.target'] *2
         increased = true
     end
 
@@ -573,19 +574,6 @@ function anl.research_complete()
     end
     increased = false
 end
-
-
--- Making them available in case another add-on wants to use them.
-anl.researchable_units = {}
-anl.researchable_units.drakish_units = drakish_units
-anl.researchable_units.dwarvish_units = dwarvish_units
-anl.researchable_units.elvish_units = elvish_units
-anl.researchable_units.human_units = human_units
-anl.researchable_units.orcish_units = orcish_units
-anl.researchable_units.outlaw_units = outlaw_units
-anl.researchable_units.undead_units = undead_units
-anl.researchable_units.dunefolk_units = dunefolk_units
-anl.researchable_units.special_units = special_units
 
 return anl
 

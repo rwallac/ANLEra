@@ -327,25 +327,25 @@ end
 -- sending gold, sending tech or negotiation options.
 
 -- Units up for negotiation
-local dwarvish_units = {'Dwarvish Fighter', 'Dwarvish Guardsman', 'Dwarvish Scout', 'Dwarvish Thunderer', 'Dwarvish Ulfserker'}
-local elvish_units = {'Elvish Archer', 'Elvish Fighter', 'Elvish Scout'}
-local drakish_units = {'Drake Fighter', 'Drake Clasher', 'Drake Burner', 'Drake Glider'}
-local undead_units
+-- Make them available in case other add-ons want to use or modify them.
+anl.negotiable_units = {}
+anl.negotiable_units.dwarvish_units = {'Dwarvish Fighter', 'Dwarvish Guardsman', 'Dwarvish Scout', 'Dwarvish Thunderer', 'Dwarvish Ulfserker'}
+anl.negotiable_units.elvish_units = {'Elvish Archer', 'Elvish Fighter', 'Elvish Scout'}
+anl.negotiable_units.drakish_units = {'Drake Fighter', 'Drake Clasher', 'Drake Burner', 'Drake Glider'}
 if wesnoth.unit_types['Skeleton Rider'] == nil then
-    undead_units = {'Skeleton', 'Skeleton Archer', 'Vampire Bat', 'Ghost', 'Ghoul'}
+    anl.negotiable_units.undead_units = {'Skeleton', 'Skeleton Archer', 'Vampire Bat', 'Ghost', 'Ghoul'}
 else
-    undead_units = {'Skeleton', 'Skeleton Archer', 'Vampire Bat', 'Ghost', 'Ghoul', 'Skeleton Rider'}
+    anl.negotiable_units.undead_units = {'Skeleton', 'Skeleton Archer', 'Vampire Bat', 'Ghost', 'Ghoul', 'Skeleton Rider'}
 end
-local human_units = {'Spearman', 'Fencer', 'Heavy Infantryman', 'Sergeant', 'Bowman', 'Horseman'}
-local outlaw_units = {'Thug', 'Thief', 'Footpad', 'Poacher'}
-local dunefolk_units = {'Dune Burner', 'Dune Soldier', 'Dune Skirmisher', 'Dune Rover', 'Dune Rider'}
-local merfolk_units
+anl.negotiable_units.human_units = {'Spearman', 'Fencer', 'Heavy Infantryman', 'Sergeant', 'Bowman', 'Horseman'}
+anl.negotiable_units.outlaw_units = {'Thug', 'Thief', 'Footpad', 'Poacher'}
+anl.negotiable_units.dunefolk_units = {'Dune Burner', 'Dune Soldier', 'Dune Skirmisher', 'Dune Rover', 'Dune Rider'}
 if wesnoth.unit_types['Merman Citizen'] == nil then
-    merfolk_units = {'Merman Fighter', 'Merman Hunter', 'Mermaid Initiate', 'ANLEra Merman Citizen'}
+    anl.negotiable_units.merfolk_units = {'Merman Fighter', 'Merman Hunter', 'Mermaid Initiate', 'ANLEra Merman Citizen'}
 else
-    merfolk_units = {'Merman Fighter', 'Merman Hunter', 'Mermaid Initiate', 'Merman Citizen'}
+    anl.negotiable_units.merfolk_units = {'Merman Fighter', 'Merman Hunter', 'Mermaid Initiate', 'Merman Citizen'}
 end
-local hero_units = {'Elvish Hero', 'White Mage', 'Revenant', 'Dwarvish Berserker'}
+anl.negotiable_units.hero_units = {'Elvish Hero', 'White Mage', 'Revenant', 'Dwarvish Berserker'}
 
 
 -- Checks whether the player can negotiate with that faction.
@@ -361,23 +361,23 @@ function anl.can_negotiate_with(other_faction)
     local partner = {}
     -- Find the units which can be negotiated.
     if other_faction == 'ANLEra_Dwarves' then
-        partner = dwarvish_units
+        partner = anl.negotiable_units.dwarvish_units
     elseif other_faction == 'ANLEra_Elves' then
-        partner = elvish_units
+        partner = anl.negotiable_units.elvish_units
     elseif other_faction == 'ANLEra_Drakes' then
-        partner = drakish_units
+        partner = anl.negotiable_units.drakish_units
     elseif other_faction == 'ANLEra_Undead' then
-        partner = undead_units
+        partner = anl.negotiable_units.undead_units
     elseif other_faction == 'ANLEra_Humans' then
-        partner = human_units
+        partner = anl.negotiable_units.human_units
     elseif other_faction == 'ANLEra_Outlaws' then
-        partner = outlaw_units
+        partner = anl.negotiable_units.outlaw_units
     elseif other_faction == 'ANLEra_Dunefolk' then
-        partner = dunefolk_units
+        partner = anl.negotiable_units.dunefolk_units
     elseif other_faction == 'Merfolk' then
-        partner = merfolk_units
+        partner = anl.negotiable_units.merfolk_units
     elseif other_faction == 'Heroes' then
-        partner = hero_units
+        partner = anl.negotiable_units.hero_units
     else
         -- Extension point:
         -- If this function is added by another add-on,
@@ -561,41 +561,41 @@ function anl.choose_new_unit (v)
     -- TODO: make this a function, so UMC can overwrite it without overwriting the rest of this function.
     if v == 'leader_option_1' then
          _ = wesnoth.textdomain 'wesnoth-anl'
-        choosable = anl.determine_choosable_recruits(dwarvish_units)
+        choosable = anl.determine_choosable_recruits(anl.negotiable_units.dwarvish_units)
         speaker = 'portraits/dwarves/lord.png'
         message = _ 'Our talks are complete — the Dwarves will gladly fight by your side. Which of our brethren do you want to recruit?'
     elseif v == 'leader_option_2' then
          _ = wesnoth.textdomain 'wesnoth-anl'
-        choosable = anl.determine_choosable_recruits(elvish_units)
+        choosable = anl.determine_choosable_recruits(anl.negotiable_units.elvish_units)
         speaker = 'portraits/elves/high-lord.png'
         message = _ 'Our talks are complete — the Elves shall aid you in this battle. Which our of kin do you wish to recruit?'
     elseif v == 'leader_option_3' then
          _ = wesnoth.textdomain 'wesnoth-ANLEra' -- this is here only for wmlxgettext (Lua is already in this domain)
-        choosable = anl.determine_choosable_recruits(drakish_units)
+        choosable = anl.determine_choosable_recruits(anl.negotiable_units.drakish_units)
         speaker = 'portraits/drakes/flameheart.png'
         message = _ 'Our talks are complete — the Drakes will gladly fight by your side. Which of our brethren do you want to recruit?'
     elseif v == 'leader_option_4' then
-        choosable = anl.determine_choosable_recruits(undead_units)
+        choosable = anl.determine_choosable_recruits(anl.negotiable_units.undead_units)
         speaker = 'portraits/undead/ancient-lich.png'
         message = _ 'Our talks are complete — I will summon the dead for you. Which of them do you want to come?'
     elseif v == 'leader_option_5' then
-        choosable = anl.determine_choosable_recruits(human_units)
+        choosable = anl.determine_choosable_recruits(anl.negotiable_units.human_units)
         speaker = 'portraits/humans/marshal-2.png'
         message = _ 'Our talks are complete — the Loyalists will gladly fight by your side. Which of our men do you want to recruit?'
     elseif v == 'leader_option_6' then
-        choosable = anl.determine_choosable_recruits(outlaw_units)
+        choosable = anl.determine_choosable_recruits(anl.negotiable_units.outlaw_units)
         speaker = 'portraits/humans/huntsman.png'
         message = _ 'Our talks are complete — the Outlaws will gladly fight by your side. Which of our men do you want to recruit?'
     elseif v == 'leader_option_7' then
-        choosable = anl.determine_choosable_recruits(merfolk_units)
+        choosable = anl.determine_choosable_recruits(anl.negotiable_units.merfolk_units)
         speaker = 'portraits/merfolk/hoplite.png'
         message = _ 'Our talks are complete — the Merfolk will gladly fight by your side. Which of our people do you want to recruit?'
     elseif v == 'leader_option_8' then
-        choosable = anl.determine_choosable_recruits(hero_units)
+        choosable = anl.determine_choosable_recruits(anl.negotiable_units.hero_units)
         speaker = 'portraits/dwarves/lord.png'
         message = _ 'Our talks are complete — some Mercenaries will gladly fight by your side. Which of us do you want to recruit?'
     elseif v == 'leader_option_9' then
-        choosable = anl.determine_choosable_recruits(dunefolk_units)
+        choosable = anl.determine_choosable_recruits(anl.negotiable_units.dunefolk_units)
         speaker = 'portraits/dunefolk/herbalist.png'
         message = _ 'Our talks are complete — the Dunefolk will support you. Who could help you the best?'
 
@@ -695,19 +695,6 @@ function anl.diplomacy_menu()
         end
     end
 end
-
-
--- Make them available in case other add-ons want to use or modify them.
-anl.negotiable_units = {}
-anl.negotiable_units.drakish_units = drakish_units
-anl.negotiable_units.dwarvish_units = dwarvish_units
-anl.negotiable_units.elvish_units = elvish_units
-anl.negotiable_units.human_units = human_units
-anl.negotiable_units.outlaw_units = outlaw_units
-anl.negotiable_units.undead_units = undead_units
-anl.negotiable_units.dunefolk_units = dunefolk_units
-anl.negotiable_units.merfolk_units = merfolk_units
-anl.negotiable_units.hero_units = hero_units
 
 return anl
 
