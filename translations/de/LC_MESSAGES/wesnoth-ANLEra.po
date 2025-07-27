@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-03-25 20:32 UTC\n"
-"PO-Revision-Date: 2025-03-25 21:33+0100\n"
+"POT-Creation-Date: 2025-07-22 02:48 UTC\n"
+"PO-Revision-Date: 2025-07-24 16:24+0200\n"
 "Last-Translator: Severin Glöckner <severin.gloeckner@stud.htwk-leipzig.de>\n"
 "Language-Team: German <irc://irc.libera.chat/#wesnoth-de>\n"
 "Language: de\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #. [message]: speaker=unit
 #: ANLEra/ANLEra_Sp/worker_options_sp.cfg:72
@@ -187,7 +187,7 @@ msgstr ""
 "Kompatibel mit der Color Changer mod."
 
 #. [multiplayer_side]: id=ANLEra_Dunefolk, type=ANLEra Dune Civilian, description=<img>src='portraits/dune-overview.png' align='middle'</img>
-#: ANLEra/factions/dunefolk.cfg:21
+#: ANLEra/factions/dunefolk.cfg:19
 msgid ""
 "Their disadvantage is that they do not benefit from forest, and thus from a "
 "big part of the map. They get however full bonus from hills without the need "
@@ -299,15 +299,81 @@ msgstr ""
 msgid "Choose Special Recruit"
 msgstr "Speziellen Einheitentyp wählen"
 
+#. [multiplayer]: id=ANLEra_Silver
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:5
+msgid "2p — ANL Silverhead"
+msgstr "2S – ANL Silverhead"
+
+#. [multiplayer]: id=ANLEra_Silver
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:9
+msgid ""
+"This 2p survival scenario allows you to construct buildings and terraform "
+"the land. Use map settings."
+msgstr ""
+"Dies ist ein Überlebensszenario für 2 Spieler, in welchem es Euch möglich "
+"ist, Gebäude zu bauen und die Landschaft umzuformen."
+
+#. [message]: speaker=narrator
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:387
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:316
+msgid "You found druid items, but you can take only one."
+msgstr "Ihr habt Druidengegenstände gefunden, doch Ihr könnt nur einen nehmen."
+
+#. [option]: description=<span color='green'>
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:390
+msgid "Increase worker HP"
+msgstr "LP der Arbeiter erhöhen"
+
+#. [option]: description=<span color='green'>
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:391
+msgid "Increases all worker’s hitpoints by 20%"
+msgstr "Erhöht die LP Eurer Arbeiter um 20%"
+
+#. [option]: description=<span color='green'>
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:436
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:318
+msgid "Take glowing staff"
+msgstr "Leuchtenden Stab nehmen"
+
+#. [option]: description=<span color='green'>
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:437
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:319
+msgid "Provides 25-2 melee impact magical attack"
+msgstr "25-2 Nahkampfangriff, wuchtig und mit magischer Präzision."
+
+#. [effect]: type=impact
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:455
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:338
+msgid "glowing staff"
+msgstr "Leuchtender Stab"
+
+#. [option]: description=<span color='green'>
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:470
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:352
+msgid "Take sparkling wand"
+msgstr "Funkelnden Stab nehmen"
+
+#. [option]: description=<span color='green'>
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:471
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:353
+msgid "Provides 25-2 ranged fire magical attack"
+msgstr "25-2 Fernkampfangriff, mit Feuerschaden und magischer Präzision."
+
+#. [effect]: type=fire
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:489
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:372
+msgid "sparkling wand"
+msgstr "Funkelnder Stab"
+
 #. [multiplayer]: id=ANLEra_ANI
 #. Use the same style like mainline mapnames in your language. Pay attention to use the same dash sign as the mainline translations.
-#: ANLEra/scenarios/2p_A_New_Island.cfg:12
+#: ANLEra/scenarios/2p_A_New_Island.cfg:13
 msgid "2p — A New Island"
 msgstr "2S – Eine wiederentdeckte Insel"
 
 #. [multiplayer]: id=ANLEra_ANI
 #. [multiplayer]: id=ANLEra_ANI4
-#: ANLEra/scenarios/2p_A_New_Island.cfg:14
+#: ANLEra/scenarios/2p_A_New_Island.cfg:15
 #: ANLEra/scenarios/4p_A_New_Island.cfg:15
 msgid ""
 "You rediscover a forgotten island. You know that humans lived here, possibly "
@@ -319,7 +385,7 @@ msgstr ""
 "Ereignisse ist diese Region in Vergessenheit geraten."
 
 #. [multiplayer]: id=ANLEra_ANI
-#: ANLEra/scenarios/2p_A_New_Island.cfg:15
+#: ANLEra/scenarios/2p_A_New_Island.cfg:16
 msgid ""
 "You have more enemies than on other maps, but less players! Try to defeat "
 "some."
@@ -328,8 +394,8 @@ msgstr ""
 "habt weniger Spieler – besiegt einige."
 
 #. [label]
-#: ANLEra/scenarios/2p_A_New_Island.cfg:42
-#: ANLEra/scenarios/2p_A_New_Island.cfg:57
+#: ANLEra/scenarios/2p_A_New_Island.cfg:43
+#: ANLEra/scenarios/2p_A_New_Island.cfg:58
 #: ANLEra/scenarios/4p_A_New_Island.cfg:42
 #: ANLEra/scenarios/4p_A_New_Island.cfg:57
 msgid "The farm"
@@ -337,20 +403,20 @@ msgstr "Die Farm"
 
 #. [label]
 #. [terrain_type]: id=ANLEra_university
-#: ANLEra/scenarios/2p_A_New_Island.cfg:47
-#: ANLEra/scenarios/2p_A_New_Island.cfg:52
+#: ANLEra/scenarios/2p_A_New_Island.cfg:48
+#: ANLEra/scenarios/2p_A_New_Island.cfg:53
 #: ANLEra/scenarios/4p_A_New_Island.cfg:47
 #: ANLEra/scenarios/4p_A_New_Island.cfg:52 ANLEra/terrain/terrain.cfg:6
 msgid "University"
 msgstr "Universität"
 
 #. [part]
-#: ANLEra/scenarios/2p_A_New_Island.cfg:78
+#: ANLEra/scenarios/2p_A_New_Island.cfg:79
 msgid "You have landed on an unknown island."
 msgstr "Ihr seid auf einer unbekannten Insel gelandet."
 
 #. [part]
-#: ANLEra/scenarios/2p_A_New_Island.cfg:87
+#: ANLEra/scenarios/2p_A_New_Island.cfg:88
 msgid "Can you settle here?"
 msgstr "Könnt Ihr Euch hier niederlassen?"
 
@@ -397,7 +463,7 @@ msgid ""
 "the land."
 msgstr ""
 "Dies ist ein Überlebensszenario für 4 Spieler, in welchem es Euch ermöglicht "
-"wird Gebäude zu bauen und die Landschaft umzuformen."
+"wird, Gebäude zu bauen und die Landschaft umzuformen."
 
 #. [multiplayer]: id=ANLEra_ANL
 #: ANLEra/scenarios/4p_A_New_Land.cfg:9
@@ -491,41 +557,6 @@ msgid ""
 msgstr ""
 "In Runde 13 wird der Schatz verschwinden und die die Druidinnen umgebenden "
 "Höhlenwände werden zu Walde werden."
-
-#. [message]: speaker=narrator
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:316
-msgid "You found druid items, but you can take only one."
-msgstr "Ihr habt Druidengegenstände gefunden, doch Ihr könnt nur einen nehmen."
-
-#. [option]: description=<span color='green'>
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:318
-msgid "Take glowing staff"
-msgstr "Leuchtenden Stab nehmen"
-
-#. [option]: description=<span color='green'>
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:319
-msgid "Provides 25-2 melee impact magical attack"
-msgstr "25-2 Nahkampfangriff, wuchtig und mit magischer Präzision."
-
-#. [effect]: type=impact
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:338
-msgid "glowing staff"
-msgstr "Leuchtender Stab"
-
-#. [option]: description=<span color='green'>
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:352
-msgid "Take sparkling wand"
-msgstr "Funkelnden Stab nehmen"
-
-#. [option]: description=<span color='green'>
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:353
-msgid "Provides 25-2 ranged fire magical attack"
-msgstr "25-2 Fernkampfangriff, mit Feuerschaden und magischer Präzision."
-
-#. [effect]: type=fire
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:372
-msgid "sparkling wand"
-msgstr "Funkelnder Stab"
 
 #. [option]: description=<span color='green'>
 #: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:386
@@ -831,7 +862,7 @@ msgid ""
 "the land."
 msgstr ""
 "Dies ist ein Überlebensszenario für 5 Spieler, in welchem es Euch ermöglicht "
-"wird Gebäude zu bauen und die Landschaft umzuformen."
+"wird, Gebäude zu bauen und die Landschaft umzuformen."
 
 #. [multiplayer]: id=ANLEra_ANL5p
 #: ANLEra/scenarios/5p_A_New_Land.cfg:8
@@ -1845,7 +1876,7 @@ msgstr ""
 "Je nach Geschlecht hat diese Einheit verschiedene Aufstiegsmöglichkeiten."
 
 #. [female]: gender=female
-#: ANLEra/units/elves/Citizen.cfg:152
+#: ANLEra/units/elves/Citizen.cfg:157
 msgid "female^Elvish Citizen"
 msgstr "Elfische Bürgerin"
 
