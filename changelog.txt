@@ -242,6 +242,25 @@
    * Deathblade added
    * Easteregg [tunnel]s activated
 
+3.5.2, 3.6.2
+ - Map from ANL2P ported, from hay207:
+   * Silverhead Crossing, ANL version (2p)
+ - Farming and Mining target doubles every time.
+ - Research and diplomacy messages are not shown during replays
+ - Auto diplomacy
+ - Auto lumberjacks (Dunefolk)
+ - Auto mushroom (Silverhead map only)
+ - Auto recovering of destroyed terrain (Silverhead map only)
+ - It is possible to overwrite the research / diplomacy unit list in scenarios
+ - Building changes:
+   * *^Vhs -> *^Vm allowed for Merfolk
+   * *^Wkf swamp overlay
+ - For 2p A New Land:
+   * Enemy ai income increases during endgame
+   * New units also after turn 25
+   * Deathblade has weak trait
+ - For 5p A New Land:
+   * Same enemy ai income increases as in the 4p map
 
 Some hints, tweaks, tricks, easter eggs, gimmicks, …:
 - When removing allow_era= from the scenario file, it can be played with leaders from another era!

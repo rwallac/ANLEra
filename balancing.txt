@@ -40,17 +40,17 @@ Remove castle, keep: 5 & 10
 
 Unit comparision:
         cost, experience, hp, melee / ranged, defence
-Peasant*   8  19(13, 10)  18     10 / 4       normal
-Woodsman*  -  19(13, 10)  18      3 / 12      forest bonus
-Ruffian*   -  16(13, 10)  16     10 / -       normal
-Citizen    8  22(15, 12)  17      8 / 8       forest bonus
-Miner*    11  20(14, 11)  25     12 / -       mountain & hill bonus, flat & village malus
-Worker    10  25(18, 14)  25     12 / 6       double malus everywhere
-Young      8  20(14, 11)  15     differs      forest bonus
-Nomad      8  24(17, 14)  19     12 / -       normal (sand and hill get a bonus, the forest a malus)
-Goblin*    9  18(13, 16)  18     18 / 4       normal
-Zombie*    8  24(17)      18     12 / -       normal
-Merman*    9  22(15, 12)  20     12 / -       water unit
+Peasant*   8  19 (13, 10) 18     10 / 4       normal
+Woodsman*  -  19 (13, 10) 18      3 / 12      forest bonus
+Ruffian*   -  16 (13, 10) 16     10 / -       normal
+Citizen    8  22 (15, 12) 17      8 / 8       forest bonus
+Miner*    11  20 (14, 11) 25     12 / -       mountain & hill bonus, flat & village malus
+Worker    10  25 (18, 14) 25     12 / 6       double malus everywhere
+Young      8  20 (14, 11) 15     differs      forest bonus
+Nomad      8  24 (17, 14) 19     12 / -       normal (sand and hill get a bonus, the forest a malus)
+Goblin*    9  18 (13, 16) 18     18 / 4       normal
+Zombie*    8  24 (17)     18     12 / -       normal
+Merman*    9  22 (15, 12) 20     12 / -       water unit
 
 Dwarves have 1 move less, because they have minimum speed cost for mountains.
 Zombies have 1 move less, because they will create a new unit if they can catch an escaping enemy.
