@@ -1069,6 +1069,12 @@ msgstr ""
 msgid "I need to go back to the base … but since you came by …"
 msgstr "War eigentlich gerade unterwegs zur Burg, aber …"
 
+msgid "Somebody threw a ring here. Who would do such a thing?"
+msgstr "Jemand hat hier einen Ring hinabgeworfen. Wer würde so etwas tun?"
+
+msgid "+5 HP"
+msgstr "+5 LP"
+
 #. [message]: speaker=narrator
 #. You refers to the team, it's in plural.
 #. »Base income«, that's what is shown in the scenario overview (reachable with alt+s ingame).
