@@ -110,7 +110,7 @@ function anl.research_menu(undo_forbidden)
     table.insert(options, { label = _ 'Continue as before' } )
     table.insert(options, anl.offer_agriculture() )
     table.insert(options, anl.offer_mining() )
-    table.insert(options, anl.offer_philosophy() )
+    --table.insert(options, anl.offer_philosophy() )
 
     -- Checking if there are more units researchable than currently choosable.
     -- Reusing the function anl.determine_faction for this.
