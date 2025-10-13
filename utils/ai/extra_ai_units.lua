@@ -11,7 +11,7 @@ local _ = wesnoth.textdomain 'wesnoth-ANLEra'
 
 -- This single function and (sub-functions) contains all the logic.
 -- It is called from a WML event, and the new recruits are given as first argument.
-function anl.extra_units(recruits, gold)
+function anl.extra_units(recruits, gold, income)
     gold = gold or 15
 
     -- The Lua map »recruits« (= is a 2-column table)
@@ -24,7 +24,7 @@ function anl.extra_units(recruits, gold)
     local function recruits_are_new(side)
         for i, new_one in ipairs(recruits[side.faction]) do
             local is_new = true
-            for i, exisiting_one in ipairs(side.recruit) do
+            for j, exisiting_one in ipairs(side.recruit) do
                 if new_one == exisiting_one then
                     is_new = false
                     break
@@ -155,7 +155,7 @@ function anl.extra_units(recruits, gold)
             end
 
             -- Add new recruits. Might be more than one.
-            for i,unit in ipairs(recruits[side.faction]) do
+            for j,unit in ipairs(recruits[side.faction]) do
                 wesnoth.wml_actions.allow_recruit{
                     side=side.side,
                     type=unit
@@ -167,6 +167,12 @@ function anl.extra_units(recruits, gold)
                 side=side.side,
                 amount=gold
             }
+
+            -- Optionally change income.
+            if income then
+                wesnoth.sides[side.side].base_income = wesnoth.sides[side.side].base_income + income
+            end
+
         end
     end
 
