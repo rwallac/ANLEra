@@ -19,8 +19,8 @@
 function anl.research_field(name_standalone, name_embedded, description, saveslot, image)
     local _ = wesnoth.textdomain 'wesnoth-ANLEra'
 
-    return { label = "<span color='green'>" .. name_standalone .. "</span>\n" .. 
-                 description .."\n" .. 
+    return { label = "<span color='green'>" .. name_standalone .. "</span>\n" ..
+                 description .."\n" ..
                  _ "Study Progress: " ..
                  wml.variables['player_' .. wesnoth.current.side .. '.' .. saveslot ..  '.progress']
                  .. '/' ..
@@ -110,7 +110,9 @@ function anl.research_menu(undo_forbidden)
     table.insert(options, { label = _ 'Continue as before' } )
     table.insert(options, anl.offer_agriculture() )
     table.insert(options, anl.offer_mining() )
-    --table.insert(options, anl.offer_philosophy() )
+    if wml.variables.anl_philosophy ~= false then
+        table.insert(options, anl.offer_philosophy() )
+    end
 
     -- Checking if there are more units researchable than currently choosable.
     -- Reusing the function anl.determine_faction for this.
