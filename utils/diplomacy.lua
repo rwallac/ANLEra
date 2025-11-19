@@ -145,7 +145,7 @@ function anl.send_gold()
             return { value = anl.send_gold_dialog(diplomacy_gold_text) }
         end
     ).value
-        
+
 
     -- The number returned is not the number of the side,
     -- but the number of the selected option!
@@ -397,7 +397,7 @@ function anl.can_negotiate_with(other_faction)
     local v_found = false
     for k,v in ipairs(partner) do
 
-        for k,w in ipairs(recruits) do
+        for l,w in ipairs(recruits) do
             if v == w then
                 v_found = true
                 break
