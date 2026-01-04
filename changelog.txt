@@ -262,6 +262,28 @@
  - For 5p A New Land:
    * Same enemy ai income increases as in the 4p map
 
+3.5.3, 3.6.3
+ - Added map: The Freelands ANL
+   * Can be played as PvP and PvE
+   * Ported from 1.12, from hay207
+ - New "Custom Option": farms get a malus when not adjacent to a village
+ - Disabled philosophy
+   * Only on PvE maps available
+   * (one needs to set in the scenario the variable anl_philosophy to enable it)
+ - Fix event removal, wrong spelling exta_ai_units -> extra_ai_units
+ - Income increase to cover costs of L2 units
+   * Silverhead ~33% general income increase
+   * 4pANL, 5pANL ~33% base income increase
+   * Using era on non-ANL maps +7 increase
+ - For 2p Silverhead:
+   * Fixed increase of worker hitpoints
+   * Lich as north-east leader
+ - Units:
+   * Miner 9g -> 10g, 20xp -> 24xp (14xp -> 17xp with 70% setting)
+   * This is one of the changes to the mainline Miner in 1.19.18
+   * Saurian devotee animation fix.
+
+
 Some hints, tweaks, tricks, easter eggs, gimmicks, …:
 - When removing allow_era= from the scenario file, it can be played with leaders from another era!
   (the same way like in mainline). The recruits will be like in mainline (Peasant & Mage).
