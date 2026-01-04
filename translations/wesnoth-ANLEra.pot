@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2025-03-25 20:32 UTC\n"
+"POT-Creation-Date: 2026-01-04 01:21 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -74,32 +74,32 @@ msgid ""
 msgstr ""
 
 #. [effect]
-#: ANLEra/era.cfg:102
+#: ANLEra/era.cfg:103
 msgid "Dwarves are on flat terrain and in forest as weak as merfolk units. Take care!"
 msgstr ""
 
 #. [checkbox]: id=ai_destroyers
-#: ANLEra/era.cfg:311
+#: ANLEra/era.cfg:312
 msgid "Scorched Earth"
 msgstr ""
 
 #. [checkbox]: id=ai_destroyers
-#: ANLEra/era.cfg:311
+#: ANLEra/era.cfg:312
 msgid " (AI-bonus)"
 msgstr ""
 
 #. [checkbox]: id=ai_destroyers
-#: ANLEra/era.cfg:312
+#: ANLEra/era.cfg:313
 msgid "AI controlled units destroy villages and castles and farmland upon moving onto it."
 msgstr ""
 
 #. [checkbox]: id=exponential_upkeep
-#: ANLEra/era.cfg:317
+#: ANLEra/era.cfg:318
 msgid "Exponential Upkeep Costs"
 msgstr ""
 
 #. [checkbox]: id=exponential_upkeep
-#: ANLEra/era.cfg:318
+#: ANLEra/era.cfg:319
 msgid ""
 "Unit upkeep costs are exponential to their level.\n"
 "Level 0 units cost 0 gold.\n"
@@ -107,33 +107,58 @@ msgid ""
 "Level 2 units cost 4 gold.\n"
 "Level 3 units cost 9 gold.\n"
 "\n"
-"Affects only recuited units, not the freed prisoner units."
+"Affects only recruited units, not the freed prisoner units."
+msgstr ""
+
+#. [checkbox]: id=anl_adjacent_farms
+#: ANLEra/era.cfg:330
+msgid "Farms adjacent to villages"
+msgstr ""
+
+#. [checkbox]: id=anl_adjacent_farms
+#: ANLEra/era.cfg:331
+msgid "Farms give -1 gold if they are not adjacent to a village."
+msgstr ""
+
+#. [checkbox]: id=anl_philosophy
+#: ANLEra/era.cfg:336
+msgid "Philosophy Research"
+msgstr ""
+
+#. [checkbox]: id=anl_philosophy
+#: ANLEra/era.cfg:337
+msgid "This makes research easier."
+msgstr ""
+
+#. [checkbox]: id=anl_philosophy
+#: ANLEra/era.cfg:338
+msgid "Always enabled in the Undead Empire add-on."
 msgstr ""
 
 #. [checkbox]: id=anl_debug
-#: ANLEra/era.cfg:330
+#: ANLEra/era.cfg:344
 msgid "ANL no cheating"
 msgstr ""
 
 #. [checkbox]: id=anl_debug
-#: ANLEra/era.cfg:331
+#: ANLEra/era.cfg:345
 msgid "Adds some debug utilities over forest terrain. Only available if Wesnoth is started with --debug (or -d) as command line parameter. Using ingame :debug doesn't count. This option can also be toggled ingame by using :set_var anl_debug=no"
 msgstr ""
 
 #. [checkbox]: id=duplicate_team_colors
-#: ANLEra/era.cfg:336
+#: ANLEra/era.cfg:350
 msgid "Allow duplicate team colors"
 msgstr ""
 
 #. [checkbox]: id=duplicate_team_colors
-#: ANLEra/era.cfg:337
+#: ANLEra/era.cfg:351
 msgid ""
 "If two sides have the same team color, a new color will be assigned to the side with the higher number.\n"
 "Compatible with Color Changer mod."
 msgstr ""
 
 #. [multiplayer_side]: id=ANLEra_Dunefolk, type=ANLEra Dune Civilian, description=<img>src='portraits/dune-overview.png' align='middle'</img>
-#: ANLEra/factions/dunefolk.cfg:21
+#: ANLEra/factions/dunefolk.cfg:19
 msgid ""
 "Their disadvantage is that they do not benefit from forest, and thus from a big part of the map. They get however full bonus from hills without the need to build a mine.\n"
 "\n"
@@ -183,60 +208,132 @@ msgid "When you play this faction, it will be decided by randomness which of the
 msgstr ""
 
 #. [multiplayer_side]: id=ANLEra_Undead, type=Walking Corpse
-#: ANLEra/factions/undead.cfg:17
+#: ANLEra/factions/undead.cfg:22
 msgid "Not many better things exist then having plague against level 0 enemies, while also being immune to it."
 msgstr ""
 
 #. [set_menu_item]: id=anl_choose_special_recruit
-#. [set_menu_item]: id=anl_choose_new_recruit_merfolk
-#: ANLEra/mechanism.cfg:194
-#: ANLEra/utils/wml/research_options.cfg:378
+#: ANLEra/mechanism.cfg:195
 msgid "Choose Special Recruit"
+msgstr ""
+
+#. [multiplayer]: id=ANLEra_Silver
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:5
+msgid "2p — ANL Silverhead"
+msgstr ""
+
+#. [multiplayer]: id=ANLEra_Silver
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:7
+msgid "This 2p survival scenario allows you to construct buildings and terraform the land. Use map settings."
+msgstr ""
+
+#. [message]: speaker=narrator
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:449
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:333
+msgid "You found druid items, but you can take only one."
+msgstr ""
+
+#. [option]: description=<span color='green'>
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:452
+msgid "Increase worker HP"
+msgstr ""
+
+#. [option]: description=<span color='green'>
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:453
+msgid "Increases all worker’s hitpoints by 20%"
+msgstr ""
+
+#. [option]: description=<span color='green'>
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:501
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:335
+msgid "Take glowing staff"
+msgstr ""
+
+#. [option]: description=<span color='green'>
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:502
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:336
+msgid "Provides 25-2 melee impact magical attack"
+msgstr ""
+
+#. [effect]: type=impact
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:520
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:355
+msgid "glowing staff"
+msgstr ""
+
+#. [option]: description=<span color='green'>
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:535
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:369
+msgid "Take sparkling wand"
+msgstr ""
+
+#. [option]: description=<span color='green'>
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:536
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:370
+msgid "Provides 25-2 ranged fire magical attack"
+msgstr ""
+
+#. [effect]: type=fire
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:554
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:389
+msgid "sparkling wand"
+msgstr ""
+
+#. [message]: id=$builder.id
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:605
+#: ANLEra/scenarios/ANI/messages.cfg:182
+msgid "I can build not only castles and villages, but also a Merfolk university. Merfolk researchers can study there."
+msgstr ""
+
+#. [message]
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:614
+#: ANLEra/scenarios/ANI/messages.cfg:191
+msgid "I can fight skeletons – or devote my time to studies in a Merfolk university."
+msgstr ""
+
+#. [message]
+#: ANLEra/scenarios/2p_ANL_Silver.cfg:615
+#: ANLEra/scenarios/ANI/messages.cfg:192
+msgid "Merfolk units of level 0 can build villages and universities in the water and at the shore."
 msgstr ""
 
 #. [multiplayer]: id=ANLEra_ANI
 #. Use the same style like mainline mapnames in your language. Pay attention to use the same dash sign as the mainline translations.
-#: ANLEra/scenarios/2p_A_New_Island.cfg:12
+#: ANLEra/scenarios/2p_A_New_Island.cfg:13
 msgid "2p — A New Island"
 msgstr ""
 
 #. [multiplayer]: id=ANLEra_ANI
-#. [multiplayer]: id=ANLEra_ANI4
-#: ANLEra/scenarios/2p_A_New_Island.cfg:14
-#: ANLEra/scenarios/4p_A_New_Island.cfg:15
+#: ANLEra/scenarios/2p_A_New_Island.cfg:15
 msgid "You rediscover a forgotten island. You know that humans lived here, possibly also elves. But in the course of bigger political events this region was forsaken."
 msgstr ""
 
 #. [multiplayer]: id=ANLEra_ANI
-#: ANLEra/scenarios/2p_A_New_Island.cfg:15
+#: ANLEra/scenarios/2p_A_New_Island.cfg:16
 msgid "You have more enemies than on other maps, but less players! Try to defeat some."
 msgstr ""
 
 #. [label]
-#: ANLEra/scenarios/2p_A_New_Island.cfg:42
-#: ANLEra/scenarios/2p_A_New_Island.cfg:57
-#: ANLEra/scenarios/4p_A_New_Island.cfg:42
-#: ANLEra/scenarios/4p_A_New_Island.cfg:57
+#: ANLEra/scenarios/2p_A_New_Island.cfg:43
+#: ANLEra/scenarios/2p_A_New_Island.cfg:58
 msgid "The farm"
 msgstr ""
 
 #. [label]
 #. [terrain_type]: id=ANLEra_university
-#: ANLEra/scenarios/2p_A_New_Island.cfg:47
-#: ANLEra/scenarios/2p_A_New_Island.cfg:52
-#: ANLEra/scenarios/4p_A_New_Island.cfg:47
-#: ANLEra/scenarios/4p_A_New_Island.cfg:52
+#: ANLEra/scenarios/2p_A_New_Island.cfg:48
+#: ANLEra/scenarios/2p_A_New_Island.cfg:53
 #: ANLEra/terrain/terrain.cfg:6
 msgid "University"
 msgstr ""
 
 #. [part]
-#: ANLEra/scenarios/2p_A_New_Island.cfg:78
+#: ANLEra/scenarios/2p_A_New_Island.cfg:79
 msgid "You have landed on an unknown island."
 msgstr ""
 
 #. [part]
-#: ANLEra/scenarios/2p_A_New_Island.cfg:87
+#: ANLEra/scenarios/2p_A_New_Island.cfg:88
 msgid "Can you settle here?"
 msgstr ""
 
@@ -260,10 +357,93 @@ msgstr ""
 msgid "This map is designed to be played with the »A New Land« era. It can be played with other eras too, but it has no villages."
 msgstr ""
 
-#. [multiplayer]: id=ANLEra_ANI4
-#. Use the same style like mainline mapnames in your language. Pay attention to use the same dash sign as the mainline translations.
-#: ANLEra/scenarios/4p_A_New_Island.cfg:13
-msgid "4p — A New Island"
+#. [multiplayer]: id=ANLEra_Freelands
+#: ANLEra/scenarios/2p_Freelands.cfg:17
+msgid "2p — A New Freeland"
+msgstr ""
+
+#. [multiplayer]: id=ANLEra_Freelands
+#: ANLEra/scenarios/2p_Freelands.cfg:20
+msgid ""
+"This survival scenario can be played as PvP when not using map settings.\n"
+"\n"
+"You can play PvP versus the AI.\n"
+"Or you can also be allied with an AI side each.\n"
+"Even playing the AI sides is possible.\n"
+"\n"
+"And of cause you can play together versus the AI."
+msgstr ""
+
+#. [part]
+#: ANLEra/scenarios/2p_Freelands.cfg:101
+msgid "You enter The Freelands. What can you find here? You plan to settle here too, but you are not alone here."
+msgstr ""
+
+#. [objectives]
+#: ANLEra/scenarios/2p_Freelands.cfg:113
+msgid "Right-click on a leader for help"
+msgstr ""
+
+#. [objective]: condition=win
+#: ANLEra/scenarios/2p_Freelands.cfg:117
+msgid ""
+"You play in PvP-Mode\n"
+"\n"
+""
+msgstr ""
+
+#. [objective]: condition=win
+#: ANLEra/scenarios/2p_Freelands.cfg:132
+msgid ""
+"You must survive until turn 25\n"
+"\n"
+""
+msgstr ""
+
+#. [objective]: condition=win
+#: ANLEra/scenarios/2p_Freelands.cfg:144
+msgid "Spiders and cave village income are present"
+msgstr ""
+
+#. [objective]: condition=win
+#: ANLEra/scenarios/2p_Freelands.cfg:149
+msgid "A tunnel connects you to the other side"
+msgstr ""
+
+#. [objective]: condition=win
+#: ANLEra/scenarios/2p_Freelands.cfg:156
+msgid "There are multiple ways to play this scenario"
+msgstr ""
+
+#. [objectives]
+#: ANLEra/scenarios/2p_Freelands.cfg:160
+msgid "From Hay207's ANL 2P"
+msgstr ""
+
+#. [note]
+#: ANLEra/scenarios/2p_Freelands.cfg:174
+msgid "You get some recalls in turn 15."
+msgstr ""
+
+#. [note]
+#: ANLEra/scenarios/2p_Freelands.cfg:181
+msgid "You cannot use the [tunnel]"
+msgstr ""
+
+#. [side]
+#: ANLEra/scenarios/2p_Freelands.cfg:199
+#: ANLEra/scenarios/2p_Freelands.cfg:237
+msgid "teamname^Newcomers"
+msgstr ""
+
+#. [message]: speaker=narrator
+#: ANLEra/scenarios/2p_Freelands.cfg:605
+msgid "The mushroom mine was destroyed. Side 3 now has 10 less base income."
+msgstr ""
+
+#. [message]: speaker=narrator
+#: ANLEra/scenarios/2p_Freelands.cfg:635
+msgid "The mushroom mine was destroyed. Side 4 now has 10 less base income."
 msgstr ""
 
 #. [multiplayer]: id=ANLEra_ANL
@@ -301,112 +481,77 @@ msgid "This map was recently added. Feedback is very welcome."
 msgstr ""
 
 #. [side]
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:81
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:97
 msgid "Evil"
 msgstr ""
 
 #. [part]
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:101
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:118
 msgid "During the Elvish Civil War, a pair of Elvish Druids stole a great elvish treasure. The two druids fled their homeland and brought a small group of renegade elves into the remote Aybabtu Valley, hoping to conceal themselves and their loot."
 msgstr ""
 
 #. [part]
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:105
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:122
 msgid "Two rival teams have learned of the treasure. They are set to fight for control of Aybabtu Valley and its secret wealth."
 msgstr ""
 
 #. [objective]: condition=win
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:122
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:139
 msgid "Defeat other team’s leaders."
 msgstr ""
 
 #. [note]
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:126
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:143
 msgid "If you kill an Elvish Druid before turn 13, then you may take one treasure to aid your battle."
 msgstr ""
 
 #. [note]
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:129
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:146
 msgid "At turn 11, the druid will summon elves to defend her."
 msgstr ""
 
 #. [note]
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:132
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:149
 msgid "At turn 13, the treasure will disappear and the cave walls around the druid will become forest."
 msgstr ""
 
-#. [message]: speaker=narrator
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:316
-msgid "You found druid items, but you can take only one."
-msgstr ""
-
 #. [option]: description=<span color='green'>
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:318
-msgid "Take glowing staff"
-msgstr ""
-
-#. [option]: description=<span color='green'>
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:319
-msgid "Provides 25-2 melee impact magical attack"
-msgstr ""
-
-#. [effect]: type=impact
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:338
-msgid "glowing staff"
-msgstr ""
-
-#. [option]: description=<span color='green'>
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:352
-msgid "Take sparkling wand"
-msgstr ""
-
-#. [option]: description=<span color='green'>
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:353
-msgid "Provides 25-2 ranged fire magical attack"
-msgstr ""
-
-#. [effect]: type=fire
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:372
-msgid "sparkling wand"
-msgstr ""
-
-#. [option]: description=<span color='green'>
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:386
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:403
 msgid "Take dark stone"
 msgstr ""
 
 #. [option]: description=<span color='green'>
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:387
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:404
 msgid "Floods other team’s river fords into swamp"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:392
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:409
 msgid "The stone in your hands is extremely cold. You drop it!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:397
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:414
 msgid "Suddenly, water flooded some land, and they are now swamps."
 msgstr ""
 
 #. [option]: description=<span color='green'>
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:420
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:437
 msgid "Take white stone"
 msgstr ""
 
 #. [option]: description=<span color='green'>
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:421
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:438
 msgid "Drains your team’s river fords into grass"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:426
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:443
 msgid "The stone in your hands is extremely hot. You drop it!"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:431
+#: ANLEra/scenarios/4p_Aybabtu_Valley.cfg:448
 msgid "Suddenly, water level lowered, and some land can be cultivated now."
 msgstr ""
 
@@ -556,43 +701,43 @@ msgid "Aethubry"
 msgstr ""
 
 #. [side]
-#: ANLEra/scenarios/4p_The_Wall.cfg:55
+#: ANLEra/scenarios/4p_The_Wall.cfg:56
 msgid "Blygwyn"
 msgstr ""
 
 #. [side]
-#: ANLEra/scenarios/4p_The_Wall.cfg:56
+#: ANLEra/scenarios/4p_The_Wall.cfg:57
 msgid "Midoc"
 msgstr ""
 
 #. [side]
-#: ANLEra/scenarios/4p_The_Wall.cfg:74
+#: ANLEra/scenarios/4p_The_Wall.cfg:76
 msgid "Rhygwyddryn"
 msgstr ""
 
 #. [side]
-#: ANLEra/scenarios/4p_The_Wall.cfg:75
+#: ANLEra/scenarios/4p_The_Wall.cfg:77
 msgid "Blyn"
 msgstr ""
 
 #. [side]
-#: ANLEra/scenarios/4p_The_Wall.cfg:93
+#: ANLEra/scenarios/4p_The_Wall.cfg:96
 msgid "Sec"
 msgstr ""
 
 #. [side]
-#: ANLEra/scenarios/4p_The_Wall.cfg:94
+#: ANLEra/scenarios/4p_The_Wall.cfg:97
 msgid "Gwyn"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: ANLEra/scenarios/4p_The_Wall.cfg:230
-#: ANLEra/scenarios/4p_The_Wall.cfg:246
+#: ANLEra/scenarios/4p_The_Wall.cfg:234
+#: ANLEra/scenarios/4p_The_Wall.cfg:250
 msgid "The Wall crumbles."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: ANLEra/scenarios/4p_The_Wall.cfg:267
+#: ANLEra/scenarios/4p_The_Wall.cfg:271
 msgid "The Wall falls."
 msgstr ""
 
@@ -617,32 +762,32 @@ msgid "Adjust the starting gold as needed, experts can try with 75."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: ANLEra/scenarios/5p_A_New_Land.cfg:687
+#: ANLEra/scenarios/5p_A_New_Land.cfg:696
 msgid "You received word about something dangerous in the nearby shallow water."
 msgstr ""
 
 #. [message]: type=ANLEra Dwarvish Miner,Dwarvish Miner,ANLEra Elvish Civilian,ANLEra Drake Worker,ANLEra Young Saurian,Ruffian,Woodsman,Peasant,Goblin Spearman,Walking Corpse
-#: ANLEra/scenarios/5p_A_New_Land.cfg:693
+#: ANLEra/scenarios/5p_A_New_Land.cfg:702
 msgid "Maybe we should be careful, there’s a lot of dangers about."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: ANLEra/scenarios/5p_A_New_Land.cfg:795
+#: ANLEra/scenarios/5p_A_New_Land.cfg:804
 msgid "Beware of enemy creatures in the mud."
 msgstr ""
 
 #. [message]: speaker=narrator
-#: ANLEra/scenarios/5p_A_New_Land.cfg:918
+#: ANLEra/scenarios/5p_A_New_Land.cfg:927
 msgid "Not so fast…"
 msgstr ""
 
 #. [message]: type=Death Knight
-#: ANLEra/scenarios/5p_A_New_Land.cfg:926
+#: ANLEra/scenarios/5p_A_New_Land.cfg:935
 msgid "Deeaaathh…"
 msgstr ""
 
 #. [message]: speaker=unit
-#: ANLEra/scenarios/5p_A_New_Land.cfg:999
+#: ANLEra/scenarios/5p_A_New_Land.cfg:1008
 msgid "They’ll never take me alive!"
 msgstr ""
 
@@ -717,21 +862,21 @@ msgstr ""
 msgid "Explorers"
 msgstr ""
 
-#: ANLEra/scenarios/ANI/define_sides.cfg:85
+#: ANLEra/scenarios/ANI/define_sides.cfg:84
 msgid "Inhabitants"
 msgstr ""
 
 #. [side]: type=Goblin Rouser
 #. [then]
 #: ANLEra/scenarios/ANI/define_sides.cfg:183
-#: ANLEra/scenarios/ANI/tunnels.cfg:104
+#: ANLEra/scenarios/ANI/tunnels.cfg:112
 msgid "Shivshank"
 msgstr ""
 
 #. [side]: type=Goblin Rouser
 #. [then]
 #: ANLEra/scenarios/ANI/define_sides.cfg:213
-#: ANLEra/scenarios/ANI/tunnels.cfg:116
+#: ANLEra/scenarios/ANI/tunnels.cfg:124
 msgid "Gagor"
 msgstr ""
 
@@ -763,48 +908,48 @@ msgstr ""
 msgid "The water here has been blocked. Let me remove the blockade."
 msgstr ""
 
-#. [message]: id=$builder.id
-#: ANLEra/scenarios/ANI/messages.cfg:182
-msgid "I can build not only castles and villages, but also a Merfolk university. Merfolk researchers can study there."
-msgstr ""
-
-#. [message]
-#: ANLEra/scenarios/ANI/messages.cfg:191
-msgid "I can fight skeletons – or devote my time to studies in a Merfolk university."
-msgstr ""
-
-#. [message]
-#: ANLEra/scenarios/ANI/messages.cfg:192
-msgid "Merfolk units of level 0 can build villages and universities in the water and at the shore."
-msgstr ""
-
 #. [message]: id=$unit.id
 #. hint, that the unit does not guard this place in other stages of the game
 #: ANLEra/scenarios/ANI/messages.cfg:222
 msgid "I need to go back to the base … but since you came by …"
 msgstr ""
 
-#. [message]: speaker=narrator
-#. You refers to the team, it's in plural.
-#. »Base income«, that's what is shown in the scenario overview (reachable with alt+s ingame).
-#. Translate it with the same term.
-#: ANLEra/scenarios/ANI/mushroom_mine_destroy.cfg:41
-msgid "You destroy the mushroom mine. Side $owner_side now has $amount less base income."
+#. [object]: id=ring
+#: ANLEra/scenarios/ANI/messages.cfg:246
+msgid "Ring"
+msgstr ""
+
+#. [object]: id=ring
+#: ANLEra/scenarios/ANI/messages.cfg:248
+msgid "Somebody threw a ring here. Who would do such a thing?"
+msgstr ""
+
+#. [object]: id=ring
+#: ANLEra/scenarios/ANI/messages.cfg:248
+msgid "+5 HP"
 msgstr ""
 
 #. [message]: speaker=narrator
 #. You refers to the team, it's in plural.
 #. »Base income«, that's what is shown in the scenario overview (reachable with alt+s ingame).
 #. Translate it with the same term.
-#: ANLEra/scenarios/ANI/mushroom_mine_destroy.cfg:45
+#: ANLEra/scenarios/ANI/mushroom_mine_destroy.cfg:42
 msgid "You destroy the mushroom mine. Whoever owned it has now $amount less base income."
+msgstr ""
+
+#. [message]: speaker=narrator
+#. You refers to the team, it's in plural.
+#. »Base income«, that's what is shown in the scenario overview (reachable with alt+s ingame).
+#. Translate it with the same term.
+#: ANLEra/scenarios/ANI/mushroom_mine_destroy.cfg:47
+msgid "You destroy the mushroom mine. Side $owner_side now has $amount less base income."
 msgstr ""
 
 #. [message]: speaker=narrator
 #. You refers to the team, it is in plural.
 #. »Base income«, this is what is shown in the scenario overview (reachable with alt+s ingame).
 #. Translate it with the same term.
-#: ANLEra/scenarios/ANI/mushroom_mine_destroy.cfg:93
+#: ANLEra/scenarios/ANI/mushroom_mine_destroy.cfg:96
 msgid "You destroy the mushroom mine. The northwest undead now have $amount less base income."
 msgstr ""
 
@@ -812,7 +957,7 @@ msgstr ""
 #. You refers to the team, it is in plural.
 #. »Base income«, this is what is shown in the scenario overview (reachable with alt+s ingame).
 #. Translate it with the same term.
-#: ANLEra/scenarios/ANI/mushroom_mine_destroy.cfg:138
+#: ANLEra/scenarios/ANI/mushroom_mine_destroy.cfg:140
 msgid "You destroy the mushroom mine. The southwest undead now have $amount less base income."
 msgstr ""
 
@@ -822,7 +967,7 @@ msgid "You don’t have to hide from this unit. Just because it can reach you, d
 msgstr ""
 
 #. [message]
-#: ANLEra/scenarios/ANI/protect_goblins.cfg:119
+#: ANLEra/scenarios/ANI/protect_goblins.cfg:120
 msgid "Come and cover me."
 msgstr ""
 
@@ -971,13 +1116,13 @@ msgid "Coalition"
 msgstr ""
 
 #. [side]: type=Orcish Warlord
-#: ANLEra/scenarios/TGW/define_sides.cfg:112
+#: ANLEra/scenarios/TGW/define_sides.cfg:113
 msgid "Chakub"
 msgstr ""
 
 #. [side]: type=Orcish Warlord
 #. Meme
-#: ANLEra/scenarios/TGW/define_sides.cfg:120
+#: ANLEra/scenarios/TGW/define_sides.cfg:121
 msgid "Yagni"
 msgstr ""
 
@@ -1139,23 +1284,23 @@ msgstr ""
 
 #. [female]: gender=female
 #. rather gender-neutral, skirmisher tree
-#: ANLEra/units/drakes/Young.cfg:119
+#: ANLEra/units/drakes/Young.cfg:68
 msgid "miner^Young Saurian"
 msgstr ""
 
 #. [female]: gender=female
-#: ANLEra/units/drakes/Young.cfg:121
+#: ANLEra/units/drakes/Young.cfg:70
 msgid "Young saurians work often as miners because they are smaller than Drakes."
 msgstr ""
 
 #. [male]: gender=male
 #. rather gender-neutral, augur tree
-#: ANLEra/units/drakes/Young.cfg:130
+#: ANLEra/units/drakes/Young.cfg:135
 msgid "magican^Young Saurian"
 msgstr ""
 
 #. [male]: gender=male
-#: ANLEra/units/drakes/Young.cfg:138
+#: ANLEra/units/drakes/Young.cfg:143
 msgid "Saurians have some knowledge of what men call sorcery, but their practice of it reeks of augury and black magic. It is little understood, but rightly regarded with fear by those against whom it is used."
 msgstr ""
 
@@ -1326,17 +1471,17 @@ msgid "Elvish Citizen"
 msgstr ""
 
 #. [unit_type]: id=ANLEra Elvish Civilian, race=elf, gender=male,female
-#: ANLEra/units/elves/Citizen.cfg:32
+#: ANLEra/units/elves/Citizen.cfg:28
 msgid "Since elves are not warlike by nature, most of their population is composed by civilians who learn, at very early age, basic usage of swords and bows. This allows them to defend themselves, or their homes, in times of need, forming a fairly skilled militia. However, if you are hurling civilians at your foes, you’re clearly out of superior forces."
 msgstr ""
 
 #. [special_note]
-#: ANLEra/units/elves/Citizen.cfg:34
+#: ANLEra/units/elves/Citizen.cfg:30
 msgid "Depending on its gender this unit has different advancement paths."
 msgstr ""
 
 #. [female]: gender=female
-#: ANLEra/units/elves/Citizen.cfg:152
+#: ANLEra/units/elves/Citizen.cfg:102
 msgid "female^Elvish Citizen"
 msgstr ""
 
@@ -1363,6 +1508,44 @@ msgstr ""
 #. [female]
 #: ANLEra/units/orcs/Orcish_Shaman.cfg:119
 msgid "female^Orcish Shaman"
+msgstr ""
+
+#. [advancement]: id=damage
+#. AMLA
+#: ANLEra/units/outlaws/Lichling.cfg:66
+msgid "Damage dealer"
+msgstr ""
+
+#. [advancement]: id=life
+#. AMLA
+#: ANLEra/units/outlaws/Lichling.cfg:99
+msgid "Healthy Lich"
+msgstr ""
+
+#. [advancement]: id=lich
+#. AMLA
+#: ANLEra/units/outlaws/Lichling.cfg:115
+msgid "Lich advancement tree"
+msgstr ""
+
+#. [unit_type]: id=ANLEra Lichling, race=undead
+#: ANLEra/units/outlaws/Lichling.cfg:145
+msgid "Lichling"
+msgstr ""
+
+#. [unit_type]: id=ANLEra Lichling, race=undead
+#: ANLEra/units/outlaws/Lichling.cfg:163
+msgid "A week, just born Lich. Its attacks are weaker, but it has health and with experience it will gain the skills of higher level Liches."
+msgstr ""
+
+#. [variation]
+#: ANLEra/units/outlaws/Lichling.cfg:289
+msgid "Lich Boss"
+msgstr ""
+
+#. [variation]
+#: ANLEra/units/outlaws/Lichling.cfg:295
+msgid "A less dangerous Lich, which has more health than the usual undead. With more experience it can become as powerful als other Liches."
 msgstr ""
 
 #. [unit_type]: id=ANLEra Youngster, race=human
@@ -1481,7 +1664,7 @@ msgid "one^Side $sides can now recruit: $new_recruits"
 msgstr ""
 
 #. [lua]: faction_message
-#: ANLEra/utils/ai/extra_ai_units.lua:194
+#: ANLEra/utils/ai/extra_ai_units.lua:200
 msgid "New recruits for AI-controlled sides:"
 msgstr ""
 
@@ -1525,6 +1708,16 @@ msgstr ""
 msgid "Flood the Swamp"
 msgstr ""
 
+#. [set_menu_item]: id=anl_fire_preload
+#: ANLEra/utils/debug.cfg:14
+msgid "Apply changes from Lua files"
+msgstr ""
+
+#. [set_menu_item]: id=anl_free_diplomacy
+#: ANLEra/utils/debug.cfg:34
+msgid "Diplomacy for free"
+msgstr ""
+
 #. [lua]: anl.send_gold_dialog
 #: ANLEra/utils/diplomacy.lua:114
 msgid "Diplomatic Options"
@@ -1541,207 +1734,177 @@ msgid "Send gold to $side_name from side $side_no|."
 msgstr ""
 
 #. [lua]: anl.send_gold
-#: ANLEra/utils/diplomacy.lua:170
+#: ANLEra/utils/diplomacy.lua:171
 msgid "I hereby donate 20 gold to the coffers of $player_name from side $side|."
 msgstr ""
 
 #. [lua]: anl.send_tech
-#: ANLEra/utils/diplomacy.lua:212
+#: ANLEra/utils/diplomacy.lua:214
 msgid "<span color='green'>$side_name from side $side_no|</span>\nShare knowledge of agriculture"
 msgstr ""
 
 #. [lua]: anl.send_tech
-#: ANLEra/utils/diplomacy.lua:225
+#: ANLEra/utils/diplomacy.lua:227
 msgid "<span color='green'>$side_name from side $side_no|</span>\nShare knowledge of mining"
 msgstr ""
 
 #. [lua]: anl.send_tech
-#: ANLEra/utils/diplomacy.lua:240
+#: ANLEra/utils/diplomacy.lua:242
 msgid "<span color='green'>$side_name from side $side_no|</span>\nShare knowledge of warfare"
 msgstr ""
 
 #. [lua]: anl.send_tech
-#: ANLEra/utils/diplomacy.lua:281
+#: ANLEra/utils/diplomacy.lua:284
 msgid "$side_name from side $side_no|, since our wisdom exceeds yours I have instructed my scholars to further your understanding of agriculture."
 msgstr ""
 
 #. [lua]: anl.send_tech
-#: ANLEra/utils/diplomacy.lua:294
+#: ANLEra/utils/diplomacy.lua:299
 msgid "$side_name from side $side_no|, since the wisdom of my people exceeds yours I have instructed my scholars to aid you in your efforts to learn the science of mining."
 msgstr ""
 
 #. [lua]: anl.send_tech
-#: ANLEra/utils/diplomacy.lua:307
+#: ANLEra/utils/diplomacy.lua:314
 msgid "$side_name from side $side_no|, you know worryingly little about the arts of war. I feel an obligation to instruct you in this vital matter."
 msgstr ""
 
 #. [lua]: negotiation_option_text
-#. [option]
-#: ANLEra/utils/diplomacy.lua:434
-#: ANLEra/utils/wml/leader_options.cfg:264
+#: ANLEra/utils/diplomacy.lua:442
 msgid "Negotiation Progress: "
 msgstr ""
 
 #. [lua]: anl.diplomacy_options
-#. [message]: speaker=unit
-#: ANLEra/utils/diplomacy.lua:463
-#: ANLEra/utils/wml/leader_options.cfg:535
+#: ANLEra/utils/diplomacy.lua:471
 msgid "Negotiate with the Dwarves"
 msgstr ""
 
 #. [lua]: anl.diplomacy_options
-#. [message]: speaker=unit
-#: ANLEra/utils/diplomacy.lua:464
-#: ANLEra/utils/wml/leader_options.cfg:535
+#: ANLEra/utils/diplomacy.lua:472
 msgid "Lets you recruit a Dwarvish unit"
 msgstr ""
 
 #. [lua]: anl.diplomacy_options
-#. [message]: speaker=unit
-#: ANLEra/utils/diplomacy.lua:468
-#: ANLEra/utils/wml/leader_options.cfg:551
+#: ANLEra/utils/diplomacy.lua:476
 msgid "Negotiate with the Elves"
 msgstr ""
 
 #. [lua]: anl.diplomacy_options
-#. [message]: speaker=unit
-#: ANLEra/utils/diplomacy.lua:469
-#: ANLEra/utils/wml/leader_options.cfg:551
+#: ANLEra/utils/diplomacy.lua:477
 msgid "Lets you recruit an Elvish unit"
 msgstr ""
 
 #. [lua]: anl.diplomacy_options
-#: ANLEra/utils/diplomacy.lua:473
+#: ANLEra/utils/diplomacy.lua:481
 msgid "Negotiate with the Dunefolk"
 msgstr ""
 
 #. [lua]: anl.diplomacy_options
-#: ANLEra/utils/diplomacy.lua:474
+#: ANLEra/utils/diplomacy.lua:482
 msgid "Lets you recruit a Dunefolk unit"
 msgstr ""
 
 #. [lua]: anl.diplomacy_options
-#. [message]: speaker=unit
-#: ANLEra/utils/diplomacy.lua:478
-#: ANLEra/utils/wml/leader_options.cfg:566
+#: ANLEra/utils/diplomacy.lua:486
 msgid "Negotiate with the Drakes"
 msgstr ""
 
 #. [lua]: anl.diplomacy_options
-#. [message]: speaker=unit
-#: ANLEra/utils/diplomacy.lua:479
-#: ANLEra/utils/wml/leader_options.cfg:566
+#: ANLEra/utils/diplomacy.lua:487
 msgid "Lets you recruit a Drake unit"
 msgstr ""
 
 #. [lua]: anl.diplomacy_options
-#: ANLEra/utils/diplomacy.lua:483
+#: ANLEra/utils/diplomacy.lua:491
 msgid "Search for a Necromancer"
 msgstr ""
 
 #. [lua]: anl.diplomacy_options
-#. [message]: speaker=unit
-#: ANLEra/utils/diplomacy.lua:484
-#: ANLEra/utils/wml/leader_options.cfg:581
+#: ANLEra/utils/diplomacy.lua:492
 msgid "Lets you recruit an Undead unit"
 msgstr ""
 
 #. [lua]: anl.diplomacy_options
-#: ANLEra/utils/diplomacy.lua:488
+#: ANLEra/utils/diplomacy.lua:496
 msgid "Contact the Loyalists"
 msgstr ""
 
 #. [lua]: anl.diplomacy_options
-#. [message]: speaker=unit
-#: ANLEra/utils/diplomacy.lua:489
-#: ANLEra/utils/wml/leader_options.cfg:597
+#: ANLEra/utils/diplomacy.lua:497
 msgid "Lets you recruit a Loyalist unit"
 msgstr ""
 
 #. [lua]: anl.diplomacy_options
-#: ANLEra/utils/diplomacy.lua:494
+#: ANLEra/utils/diplomacy.lua:502
 msgid "Integrate the Outlaws"
 msgstr ""
 
 #. [lua]: anl.diplomacy_options
-#: ANLEra/utils/diplomacy.lua:495
+#: ANLEra/utils/diplomacy.lua:503
 msgid "Lets you recruit an Outlaw unit"
 msgstr ""
 
 #. [lua]: anl.diplomacy_options
-#: ANLEra/utils/diplomacy.lua:500
+#: ANLEra/utils/diplomacy.lua:508
 msgid "Strengthen the bond with the Merfolk"
 msgstr ""
 
 #. [lua]: anl.diplomacy_options
-#: ANLEra/utils/diplomacy.lua:501
+#: ANLEra/utils/diplomacy.lua:509
 msgid "You can obtain Merfolk builders and researchers"
 msgstr ""
 
 #. [lua]: anl.diplomacy_options
-#: ANLEra/utils/diplomacy.lua:505
+#: ANLEra/utils/diplomacy.lua:513
 msgid "Hire Mercenaries"
 msgstr ""
 
 #. [lua]: anl.diplomacy_options
-#: ANLEra/utils/diplomacy.lua:506
+#: ANLEra/utils/diplomacy.lua:514
 msgid "Lets you recruit a level 2 unit"
 msgstr ""
 
 #. [lua]: anl.choose_new_unit
-#. [message]: speaker=narrator
-#: ANLEra/utils/diplomacy.lua:568
-#: ANLEra/utils/wml/leader_options.cfg:728
+#: ANLEra/utils/diplomacy.lua:576
 msgid "Our talks are complete — the Drakes will gladly fight by your side. Which of our brethren do you want to recruit?"
 msgstr ""
 
 #. [lua]: anl.choose_new_unit
-#. [message]: speaker=narrator
-#: ANLEra/utils/diplomacy.lua:572
-#: ANLEra/utils/wml/leader_options.cfg:759
+#: ANLEra/utils/diplomacy.lua:580
 msgid "Our talks are complete — I will summon the dead for you. Which of them do you want to come?"
 msgstr ""
 
 #. [lua]: anl.choose_new_unit
-#. [message]: speaker=narrator
-#: ANLEra/utils/diplomacy.lua:576
-#: ANLEra/utils/wml/leader_options.cfg:792
+#: ANLEra/utils/diplomacy.lua:584
 msgid "Our talks are complete — the Loyalists will gladly fight by your side. Which of our men do you want to recruit?"
 msgstr ""
 
 #. [lua]: anl.choose_new_unit
-#. [message]: speaker=narrator
-#: ANLEra/utils/diplomacy.lua:580
-#: ANLEra/utils/wml/leader_options.cfg:826
+#: ANLEra/utils/diplomacy.lua:588
 msgid "Our talks are complete — the Outlaws will gladly fight by your side. Which of our men do you want to recruit?"
 msgstr ""
 
 #. [lua]: anl.choose_new_unit
-#. [message]: speaker=narrator
-#: ANLEra/utils/diplomacy.lua:584
-#: ANLEra/utils/wml/leader_options.cfg:858
+#: ANLEra/utils/diplomacy.lua:592
 msgid "Our talks are complete — the Merfolk will gladly fight by your side. Which of our people do you want to recruit?"
 msgstr ""
 
 #. [lua]: anl.choose_new_unit
-#. [message]: speaker=narrator
-#: ANLEra/utils/diplomacy.lua:588
-#: ANLEra/utils/wml/leader_options.cfg:891
+#: ANLEra/utils/diplomacy.lua:596
 msgid "Our talks are complete — some Mercenaries will gladly fight by your side. Which of us do you want to recruit?"
 msgstr ""
 
 #. [lua]: anl.choose_new_unit
-#: ANLEra/utils/diplomacy.lua:592
+#: ANLEra/utils/diplomacy.lua:600
 msgid "Our talks are complete — the Dunefolk will support you. Who could help you the best?"
 msgstr ""
 
 #. [lua]: anl.choose_new_unit
-#: ANLEra/utils/diplomacy.lua:601
+#: ANLEra/utils/diplomacy.lua:609
 msgid "Function anl.choose_new_unit has no information about the faction."
 msgstr ""
 
 #. [lua]: anl.choose_new_unit
-#: ANLEra/utils/diplomacy.lua:617
+#: ANLEra/utils/diplomacy.lua:625
 msgid "Negotiation Complete"
 msgstr ""
 
@@ -1867,6 +2030,16 @@ msgstr ""
 #. [option]
 #: ANLEra/utils/help.cfg:186
 msgid "Situational Workers"
+msgstr ""
+
+#. [checkbox]: id=anl_philosophy
+#: ANLEra/utils/helper_macros.cfg:381
+msgid "Enable Philosophy"
+msgstr ""
+
+#. [checkbox]: id=anl_philosophy
+#: ANLEra/utils/helper_macros.cfg:382
+msgid "Allows to research research."
 msgstr ""
 
 #. Part of the scenario objectives
@@ -2079,9 +2252,7 @@ msgid "You cannot hide from the Inferno Drakes"
 msgstr ""
 
 #. [lua]: anl.research_field
-#. [option]
 #: ANLEra/utils/research.lua:24
-#: ANLEra/utils/wml/research_options.cfg:545
 msgid "Study Progress: "
 msgstr ""
 
@@ -2108,9 +2279,7 @@ msgid "Miners produce +1 gold"
 msgstr ""
 
 #. [lua]: anl.offer_philosophy
-#. [option]
 #: ANLEra/utils/research.lua:63
-#: ANLEra/utils/wml/research_options.cfg:543
 msgid "Philosophy"
 msgstr ""
 
@@ -2120,9 +2289,7 @@ msgid "philosophy"
 msgstr ""
 
 #. [lua]: anl.offer_philosophy
-#. [option]
 #: ANLEra/utils/research.lua:63
-#: ANLEra/utils/wml/research_options.cfg:544
 msgid "Scholars improve their research methods"
 msgstr ""
 
@@ -2154,193 +2321,104 @@ msgid "Allows you to recruit a new type of unit"
 msgstr ""
 
 #. [lua]: anl.research_menu
-#: ANLEra/utils/research.lua:132
+#: ANLEra/utils/research.lua:134
 msgid "Research"
 msgstr ""
 
 #. [lua]: anl.research_menu
 #. "g" denotes the unit for gold
-#: ANLEra/utils/research.lua:134
+#: ANLEra/utils/research.lua:136
 msgid "We are currently studying $project_name|. To which end would you have our scholars devote their minds?\n\nOur farms produce $farming_level|g\nOur mines produce $mining_level|g\n"
 msgstr ""
 
 #. [lua]: anl.build_recruit_options
-#. [option]
 #. Text for the option to cancel. Decide later which unit to choose.
-#. Decide later which unit to obtain from research
-#: ANLEra/utils/research.lua:205
-#: ANLEra/utils/wml/helper_macros.cfg:35
+#: ANLEra/utils/research.lua:208
 msgid "Choose later."
 msgstr ""
 
 #. [lua]: anl.build_recruit_options
-#. [option]
 #. Text for the option to cancel. Just one unit is left to be chosen.
-#. Decide later whether to obtain this unit from research
-#: ANLEra/utils/research.lua:208
-#: ANLEra/utils/wml/helper_macros.cfg:50
+#: ANLEra/utils/research.lua:211
 msgid "No, maybe not."
 msgstr ""
 
 #. [lua]: anl.determine_faction
-#: ANLEra/utils/research.lua:308
+#: ANLEra/utils/research.lua:311
 msgid "Researching is not fully supported for this unit."
 msgstr ""
 
 #. [lua]: anl.determine_faction
-#: ANLEra/utils/research.lua:309
+#: ANLEra/utils/research.lua:312
 msgid "This is likely a bug. Researcher’s type is "
 msgstr ""
 
 #. [lua]: anl.determine_faction
-#: ANLEra/utils/research.lua:309
+#: ANLEra/utils/research.lua:312
 msgid "NOT GIVEN"
 msgstr ""
 
 #. [lua]: anl.choose_new_recruit
-#: ANLEra/utils/research.lua:338
+#: ANLEra/utils/research.lua:341
 msgid "No units left to be researched. It’s a bug that this option was offered to you."
 msgstr ""
 
 #. [lua]: text
-#. [message]: speaker=unit
 #. Only one unit to choose from. Similar string in textdomain wesnoth-anl.
-#. Only one unit to choose from. Similar string in textdomain wesnoth-anl.
-#: ANLEra/utils/research.lua:350
-#: ANLEra/utils/wml/research_options.cfg:411
+#: ANLEra/utils/research.lua:353
 msgid "Would you like to be able to recruit this unit?"
 msgstr ""
 
 #. [lua]: text
 #. [lua]: anl.research_complete
 #. [lua]: book
-#: ANLEra/utils/research.lua:389
-#: ANLEra/utils/research.lua:442
-#: ANLEra/utils/research.lua:470
-#: ANLEra/utils/research.lua:499
-#: ANLEra/utils/research.lua:509
-#: ANLEra/utils/research.lua:552
-#: ANLEra/utils/research.lua:564
+#: ANLEra/utils/research.lua:392
+#: ANLEra/utils/research.lua:445
+#: ANLEra/utils/research.lua:473
+#: ANLEra/utils/research.lua:502
+#: ANLEra/utils/research.lua:512
+#: ANLEra/utils/research.lua:555
+#: ANLEra/utils/research.lua:567
 msgid "Study Complete"
 msgstr ""
 
 #. [lua]: text
-#: ANLEra/utils/research.lua:391
+#: ANLEra/utils/research.lua:394
 msgid "We researched all units. It would be wise to change the research target now."
 msgstr ""
 
 #. [lua]: anl.research_complete
-#: ANLEra/utils/research.lua:444
+#: ANLEra/utils/research.lua:447
 msgid "$side_name|’s farms produce now $amount gold."
 msgstr ""
 
 #. [lua]: anl.research_complete
-#: ANLEra/utils/research.lua:472
+#: ANLEra/utils/research.lua:475
 msgid "$side_name|’s mines produce now $amount gold."
 msgstr ""
 
 #. [lua]: anl.research_complete
 #. one new unit available
-#: ANLEra/utils/research.lua:502
+#: ANLEra/utils/research.lua:505
 msgid "$side_name|, we have finished researching warfare. Right-click on a researcher in a university to select a unit to recruit."
 msgstr ""
 
 #. [lua]: anl.research_complete
 #. multiple new units available
-#: ANLEra/utils/research.lua:512
+#: ANLEra/utils/research.lua:515
 msgid "$side_name|, we have finished researching warfare. Right-click on a researcher in a university to select new units to recruit."
 msgstr ""
 
 #. [lua]: book
 #. shown after accomplishing the philisophy research project the first time
-#: ANLEra/utils/research.lua:556
+#: ANLEra/utils/research.lua:559
 msgid "By coordinating research efforts and creating dedicated teams $side_name|’s scholars managed to double their research results."
 msgstr ""
 
 #. [lua]: book
 #. shown the 2nd and later times after completing philisophy research
-#: ANLEra/utils/research.lua:567
+#: ANLEra/utils/research.lua:570
 msgid "The scienific progress of $side_name|’s scholars is by now at $amount|00%."
-msgstr ""
-
-#. [message]: speaker=unit
-#: ANLEra/utils/wml/leader_options.cfg:581
-msgid "Negotiate with the Undead"
-msgstr ""
-
-#. [message]: speaker=unit
-#: ANLEra/utils/wml/leader_options.cfg:597
-msgid "Negotiate with Loyalists"
-msgstr ""
-
-#. [message]: speaker=unit
-#: ANLEra/utils/wml/leader_options.cfg:613
-msgid "Negotiate with the Outlaws"
-msgstr ""
-
-#. [message]: speaker=unit
-#: ANLEra/utils/wml/leader_options.cfg:613
-msgid "Lets you recruit a Outlaw unit"
-msgstr ""
-
-#. [message]: speaker=unit
-#: ANLEra/utils/wml/leader_options.cfg:628
-msgid "Negotiate with the Merfolk"
-msgstr ""
-
-#. [message]: speaker=unit
-#: ANLEra/utils/wml/leader_options.cfg:628
-msgid "Lets you recruit a Merfolk unit"
-msgstr ""
-
-#. [message]: speaker=unit
-#: ANLEra/utils/wml/leader_options.cfg:638
-msgid "Negotiate with Mercenaries"
-msgstr ""
-
-#. [message]: speaker=unit
-#: ANLEra/utils/wml/leader_options.cfg:638
-msgid "Lets you recruit Mercenary units"
-msgstr ""
-
-#. [message]: speaker=narrator
-#: ANLEra/utils/wml/leader_options.cfg:893
-msgid "Elvish Hero"
-msgstr ""
-
-#. [message]: speaker=narrator
-#: ANLEra/utils/wml/leader_options.cfg:894
-msgid "Mage Hero"
-msgstr ""
-
-#. [message]: speaker=narrator
-#: ANLEra/utils/wml/leader_options.cfg:895
-msgid "Fallen Hero"
-msgstr ""
-
-#. [message]: speaker=narrator
-#: ANLEra/utils/wml/leader_options.cfg:896
-msgid "Berserker Hero"
-msgstr ""
-
-#. [set_menu_item]: id=anl_fire_preload
-#: ANLEra/utils/wml/switch_between_lua_and_wml_menus.cfg:13
-msgid "Apply changes from Lua files"
-msgstr ""
-
-#. [set_menu_item]: id=anl_wml
-#: ANLEra/utils/wml/switch_between_lua_and_wml_menus.cfg:34
-msgid "Switch to WML code"
-msgstr ""
-
-#. [set_menu_item]: id=anl_lua
-#: ANLEra/utils/wml/switch_between_lua_and_wml_menus.cfg:53
-msgid "Switch to Lua code"
-msgstr ""
-
-#. [set_menu_item]: id=anl_free_diplomacy
-#: ANLEra/utils/wml/switch_between_lua_and_wml_menus.cfg:102
-msgid "Diplomacy for free"
 msgstr ""
 
 #. [option]: description=<span size='small'>
